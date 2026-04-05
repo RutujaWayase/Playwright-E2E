@@ -23,5 +23,31 @@ Install playwright:
 8) Testfile example:
     <img width="900" height="522" alt="image" src="https://github.com/user-attachments/assets/d9ba0be3-e92d-4ace-8c3e-be599da3b944" />
 
-9) 
+9) Files:    package.json => node project management file
+   playwright.config.js => playwright configuration
+   tests => we can all the playwright tests
+
+  npm playwright -v => return installed version of playwright
+  
+  Playwright can be istalled from vscode plugin
+10)  Command to run playwright tests: "npx playwright test"
+ <img width="1212" height="940" alt="image" src="https://github.com/user-attachments/assets/7547eca1-e88d-4eba-bc55-a6e5ac00c11f" />
+
+11) By default tests are executed in headless mode. => Default command => npx playwright test
+12) To executed tests in headed mode => Use command => npx playwright test --headed <img width="1291" height="972" alt="image" src="https://github.com/user-attachments/assets/a15e09d3-1691-423a-ac11-997d8a0c70b2" />
+
+13) Report => <img width="732" height="118" alt="image" src="https://github.com/user-attachments/assets/52df8908-d8f5-4ec7-a09a-7a3e22e44410" />
+   <img width="1695" height="791" alt="image" src="https://github.com/user-attachments/assets/3e832b2d-0a03-4225-b30e-8470550e8314" />
+
+14) Run playwright => npx playwright test (Headless Mode - Default) ; npx playwright test --headed (Headed Mode) ; npx playwright show-report (HTML Report)
+15) 
+16) 
+17) 
+
+18) 
+19) 
+20) 
+ 
+  
+11) 
 
