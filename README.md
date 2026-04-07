@@ -57,8 +57,13 @@ test ('Home Page', async({page}) => {
     await expect(page).toHaveURL('https://www.demoblaze.com/index.html');
     await page.close();
 })
-17) 
-18) 
+17) To test on specific browser for example chrome use command =>npx playwright test HomePageTest.spec.js --project=chromium
+18) How to Create and Run Playwright Tests:
+npx playwright test => runs all tests on all browsers in headless mode
+npx playwright test MyTest.spec.js => runs a specific test file
+npx playwright test MyTest.spec.js --project=chromium => runs on specific browser
+npx playwright test MyTest.spec.js --project=chromium --headed => runs in headed mode
+npx playwright test Mytest.spec.js --project=chromium --headed --debug => runs in debug mode
 
 19) 
 20) 
