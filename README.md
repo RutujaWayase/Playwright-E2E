@@ -40,13 +40,29 @@ Install playwright:
    <img width="1695" height="791" alt="image" src="https://github.com/user-attachments/assets/3e832b2d-0a03-4225-b30e-8470550e8314" />
 
 14) Run playwright => npx playwright test (Headless Mode - Default) ; npx playwright test --headed (Headed Mode) ; npx playwright show-report (HTML Report)
-15) 
-16) 
-17) 
+15) To run specific test use command => npx playwright test HomePageTest.spec.js
+16) Example =>            const {test, expect} = require ('@playwright/test');
 
+test ('Home Page', async({page}) => {
+    await page.goto('https://www.demoblaze.com/index.html');
+
+    const pageTitle = page.title();
+    console.log('Page title is:', pageTitle);
+
+    await expect(page).toHaveTitle('STORE');
+
+    const pageURL = page.url();
+    console.log('Page URL is:', pageURL);
+
+    await expect(page).toHaveURL('https://www.demoblaze.com/index.html');
+    await page.close();
+})
+17) 
 18) 
+
 19) 
 20) 
+21) 
  
   
 11) 
