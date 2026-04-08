@@ -71,6 +71,7 @@ npx playwright test MyTest.spec.js --project=chromium --headed => runs in headed
 
 npx playwright test Mytest.spec.js --project=chromium --headed --debug => runs in debug mode
 
+
 19) 
 20) 
 21) 
