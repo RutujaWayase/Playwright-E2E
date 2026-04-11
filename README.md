@@ -40,7 +40,9 @@ Install playwright:
    <img width="1695" height="791" alt="image" src="https://github.com/user-attachments/assets/3e832b2d-0a03-4225-b30e-8470550e8314" />
 
 14) Run playwright => npx playwright test (Headless Mode - Default) ; npx playwright test --headed (Headed Mode) ; npx playwright show-report (HTML Report)
+
 15) To run specific test use command => npx playwright test HomePageTest.spec.js
+
 16) Example =>            const {test, expect} = require ('@playwright/test');
 
 test ('Home Page', async({page}) => {
@@ -57,6 +59,7 @@ test ('Home Page', async({page}) => {
     await expect(page).toHaveURL('https://www.demoblaze.com/index.html');
     await page.close();
 })
+
 17) To test on specific browser for example chrome use command =>npx playwright test HomePageTest.spec.js --project=chromium
 
 18) How to Create and Run Playwright Tests:
@@ -72,7 +75,7 @@ npx playwright test MyTest.spec.js --project=chromium --headed => runs in headed
 npx playwright test Mytest.spec.js --project=chromium --headed --debug => runs in debug mode
 
 
-19) Locating Elements in Playwright
+19) **Locating Elements in Playwright**
 
 property
 css
@@ -96,6 +99,12 @@ await page.type('locator', 'value')
 Locate multiple web elements =>
 
 const elements = await page.$$(locator)
+
+![alt text](image.png)
+
+Multiple Locators => 
+![alt text](image-1.png)
+
 
 20) 
 21) 
