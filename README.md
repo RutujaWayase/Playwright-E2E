@@ -72,7 +72,31 @@ npx playwright test MyTest.spec.js --project=chromium --headed => runs in headed
 npx playwright test Mytest.spec.js --project=chromium --headed --debug => runs in debug mode
 
 
-19) 
+19) Locating Elements in Playwright
+
+property
+css
+xpath
+
+Locate single element =>
+
+link/button =>
+
+await page.locator('locator').click()
+await page.click('locator');
+
+inputbox =>
+
+await page.locator('locator').fill('value')
+await page.locator('locator').type('value')
+
+await page.fill('locator', 'value')
+await page.type('locator', 'value') 
+
+Locate multiple web elements =>
+
+const elements = await page.$$(locator)
+
 20) 
 21) 
  
