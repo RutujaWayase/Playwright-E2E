@@ -105,7 +105,7 @@ const elements = await page.$$(locator)
 Multiple Locators => 
 ![alt text](image-1.png)
 
-20) Built - in locators =>
+20) **Built - in locators** =>
 
 page.getByRole() to locate by explicit and implicit accessibility attributes.
 page.getByText() to locate by text content.
@@ -117,9 +117,25 @@ page.getByTestId() to locate an element besed on its data - testid attribute.
 
 URL = https://playwright.dev/docs/locators
 
+21) **Test generator: Codegn** => automatically generate test and locators.
 
-21) 
+npx playwright codegen -o tests/mytest.spec.js
+
+npx playwright codegen --target javascript
+
+npx playwright codegen --browser chromium
+
+npx playwright codegen --device "iPhone 13"
+
+List of devices supported => use command for ex: npx playwright codegen --device "iPhone12"
+![alt text](image-2.png)
  
+Viewport =>
+
+npx playwright codegen –viewport-size “1280, 720”   --> for x & y coordinates
+
+URL: https://playwright.dev/docs/codegen 
+
   
 11) 
 
