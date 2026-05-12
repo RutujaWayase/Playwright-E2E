@@ -143,5 +143,6 @@ npx playwright codegen –viewport-size “1280, 720”   --> for x & y coordina
 URL: https://playwright.dev/docs/codegen 
 
   
-11) 
+11) Assertions =>
+Hard nd Soft Assertions
 
