@@ -146,3 +146,18 @@ URL: https://playwright.dev/docs/codegen
 11) Assertions =>
 Hard nd Soft Assertions
 
+12) Actions =>
+Checkboxes and Radio Buttons =>
+Using locator.setChecked() is the easiest way to check and uncheck a checkbox or a radio button. This method can be used with input[type=checkbox], input[type=radio] and [role=checkbox] elements
+URL: https://playwright.dev/docs/input
+
+await page.locator("//input[@value='female']").check(); //female
+    //await page.check("//input[@value='female']");
+    await page.getByLabel("Female").check();
+    expect(await page.getByLabel("Female")).toBeChecked();
+    await expect(await page.locator("//input[@value='female']")).toBeChecked();
+    await expect(await page.locator("//input[@value='female']").isChecked()).toBeTruthy();//female
+
+    await expect(await page.locator("//input[@value='male']").isChecked()).toBeFalsy();//male
+
+
