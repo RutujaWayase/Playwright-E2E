@@ -44,7 +44,7 @@ test('Prompt Dialog', async ({page}) => {
         await dialog.accept('John'); 
     })
 
-    await page.click("//button[normalize-space()='Prompt'] ");
+    await page.click("//button[normalize-space()='Prompt Alert'] ");
     await expect(page.locator('//p[@id="demo"]')).toHaveText('Hello John! How are you today?')
 
     await page.waitForTimeout(5000);
