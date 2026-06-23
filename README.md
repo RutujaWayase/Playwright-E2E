@@ -160,4 +160,34 @@ await page.locator("//input[@value='female']").check(); //female
 
     await expect(await page.locator("//input[@value='male']").isChecked()).toBeFalsy();//male
 
+13) Keyboard => https://playwright.dev/docs/api/class-keyboard
+
+An example of pressing uppercase A
+
+await page.keyboard.press('Shift+KeyA');
+// or
+await page.keyboard.press('Shift+A');
+
+An example to trigger select-all with the keyboard
+
+await page.keyboard.press('ControlOrMeta+A');
+
+Use Control for Windows machine OS
+Use Meta for MAC machine OS
+
+
+    //Ctrl + A ---> Select the text
+    await page.keyboard.press('Control+A')
+    //for MAC OS machine use Meta+A
+
+    
+    //Ctrl + C ---> Copy the text
+    await page.keyboard.press('Control+C')
+
+    //Tab ---> Tab
+    await page.keyboard.down('Tab')
+    await page.keyboard.up('Tab')
+
+    //Ctrl + V  ---> Paste the text
+    await page.keyboard.press('Meta+V')
 
