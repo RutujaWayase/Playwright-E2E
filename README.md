@@ -191,3 +191,13 @@ Use Meta for MAC machine OS
     //Ctrl + V  ---> Paste the text
     await page.keyboard.press('Meta+V')
 
+Playwright Hooks:
+
+beforeEach: This hook is executed before each individual test.
+afterEach: This hook is executed after ecah individual test.
+
+beforeAll: This hook is executed once before any of the tests start running.
+afterAll: This hook is executed once after all the tests have been run.
+
+![alt text](image-3.png)
+
