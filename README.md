@@ -201,3 +201,17 @@ afterAll: This hook is executed once after all the tests have been run.
 
 ![alt text](image-3.png)
 
+Screenshot:
+Timestamp: Date.now
+
+For ex:
+await page.screenshot({ path: 'tests/screenshots/'+ Date.now() + 'HomePage.png'})
+
+await page.screenshot({ path: 'tests/screenshots/' + Date.now() + 'FullPage.png', fullPage:true})
+
+await page.locator('//h4/a[normalize-space()="MacBook"]').screenshot({ path: 'tests/screenshots/' + Date.now() + 'MacBook.png'})
+
+add screenshot: 'on' in playwright.conf file to capture screenshot of all the tests
+
+1) use .screenshot() => to take screenshot for file level/locator
+2) add screenshot: on in playwright.conf file under use{} section to get screenshot of all the test runs by default in reports. And use command npx playwright show-report
