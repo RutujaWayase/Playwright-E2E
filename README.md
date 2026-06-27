@@ -191,7 +191,7 @@ Use Meta for MAC machine OS
     //Ctrl + V  ---> Paste the text
     await page.keyboard.press('Meta+V')
 
-Playwright Hooks:
+14) Playwright Hooks:
 
 beforeEach: This hook is executed before each individual test.
 afterEach: This hook is executed after ecah individual test.
@@ -201,7 +201,7 @@ afterAll: This hook is executed once after all the tests have been run.
 
 ![alt text](image-3.png)
 
-Screenshot:
+15) Screenshot:
 Timestamp: Date.now
 
 For ex:
@@ -215,3 +215,32 @@ add screenshot: 'on' in playwright.conf file to capture screenshot of all the te
 
 1) use .screenshot() => to take screenshot for file level/locator
 2) add screenshot: on in playwright.conf file under use{} section to get screenshot of all the test runs by default in reports. And use command npx playwright show-report
+
+16) Video: and in playwright.config file
+video: "on" / video: "retain-on-failure",
+
+17) Trace: and in playwright.config file
+trace: 'on-first-retry', / trace: 'retain-on-failure',
+
+Refer: https://playwright.dev/docs/trace-viewer
+
+Command to trace file => npx playwright show-trace path/to/trace.zip
+
+
+18) Tags:
+@smoke for critical functionality tests
+
+@regression for tests that ensure new changes don’t break existing functionality
+
+@critical for high-priority tests that must pass to ensure the application is stable
+
+commands=> grep will include while --grep-invert will exclude.
+
+npx playwright test tests/Tags.spec.js --project chromium --headed --grep @sanity
+
+npx playwright test tests/Tags.spec.js --project chromium --grep @sanity --grep-invert @reg  
+
+19) Annotations:
+
+
+
