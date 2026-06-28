@@ -253,5 +253,8 @@ test.slow() marks the test as slow and triples the test timeout.
 Refer: https://playwright.dev/docs/test-annotations 
 
 
-20) 
+20) Page Object Models:
+
+![alt text](image-4.png)
+
 
