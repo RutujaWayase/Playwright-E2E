@@ -257,4 +257,20 @@ Refer: https://playwright.dev/docs/test-annotations
 
 ![alt text](image-4.png)
 
+21) Reporters: https://playwright.dev/docs/test-reporters
+
+reporter: 'html', //'list', //'line',
+
+ reporter: [['json', {outputFile: 'results.json'}]],
+
+ reporter: [['junit', {outputFile: 'results.xml'}]],
+
+  OR for multiple reporters =>
+  reporter: [['list'],
+  ['html'],
+  ['junit', {outputFile: 'results.xml'}],
+  ['json', {outputFile: 'results.json'}]
+  ],
+
+Refer => https://playwright.dev/docs/api/class-reporter
 
