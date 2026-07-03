@@ -67,9 +67,29 @@
     "quiet": false,
     "reporter": [
       [
+        "list",
+        null
+      ],
+      [
+        "html",
+        null
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
+        }
+      ],
+      [
         "json",
         {
           "outputFile": "results.json"
+        }
+      ],
+      [
+        "D:\\2026 - Study\\Playwright\\Playwright-E2E\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        {
+          "outputFolder": "my-allure-results"
         }
       ]
     ],
@@ -109,12 +129,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5498,
+                  "duration": 3457,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-03T08:56:06.826Z",
+                  "startTime": "2026-07-03T09:21:40.536Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -154,12 +174,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5107,
+                  "duration": 6903,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-03T08:56:17.422Z",
+                  "startTime": "2026-07-03T09:21:46.477Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -199,10 +219,10 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 8862,
+                  "duration": 8686,
                   "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce\"\u001b[39m\nReceived: \u001b[31m\"Just a moment...\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    8 × unexpected value \"Just a moment...\"\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce\"\u001b[39m\nReceived: \u001b[31m\"Just a moment...\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    8 × unexpected value \"Just a moment...\"\u001b[22m\n\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\Reporters.spec.js:13:24",
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce\"\u001b[39m\nReceived: \u001b[31m\"Just a moment...\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Just a moment...\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce\"\u001b[39m\nReceived: \u001b[31m\"Just a moment...\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Just a moment...\"\u001b[22m\n\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\Reporters.spec.js:13:24",
                     "location": {
                       "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\Reporters.spec.js",
                       "column": 24,
@@ -217,13 +237,13 @@
                         "column": 24,
                         "line": 13
                       },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce\"\u001b[39m\nReceived: \u001b[31m\"Just a moment...\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    8 × unexpected value \"Just a moment...\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 11 |\u001b[39m test(\u001b[32m'Test3'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}) \u001b[33m=>\u001b[39m {\n \u001b[90m 12 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.nopcommerce.com/en'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[32m'Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m })\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\Reporters.spec.js:13:24\u001b[22m"
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce\"\u001b[39m\nReceived: \u001b[31m\"Just a moment...\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Just a moment...\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 11 |\u001b[39m test(\u001b[32m'Test3'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}) \u001b[33m=>\u001b[39m {\n \u001b[90m 12 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.nopcommerce.com/en'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[32m'Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m })\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\Reporters.spec.js:13:24\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-03T08:56:22.588Z",
+                  "startTime": "2026-07-03T09:21:53.411Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -267,8 +287,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-03T08:56:03.856Z",
-    "duration": 28887.537999999997,
+    "startTime": "2026-07-03T09:21:37.818Z",
+    "duration": 25884.516,
     "expected": 2,
     "skipped": 0,
     "unexpected": 1,

@@ -274,3 +274,30 @@ reporter: 'html', //'list', //'line',
 
 Refer => https://playwright.dev/docs/api/class-reporter
 
+22) Allure Reports for Playwright => https://www.npmjs.com/package/allure-playwright 
+
+
+![alt text](image-5.png)
+
+Command to install: npm install -D allure-playwright
+and check on installing its present under package.json file. 
+
+![alt text](image-6.png) 
+
+ reporter: [['list'],
+  ['html'],
+  ['junit', {outputFile: 'results.xml'}],
+  ['json', {outputFile: 'results.json'}],
+  ['allure-playwright', {outputFolder: 'my-allure-results'}]
+  ],
+
+Refer => https://www.npmjs.com/package/allure-playwright
+
+Command =>
+allure generate ./allure-results -o ./allure-report
+allure open ./allure-report
+
+
+
+
+

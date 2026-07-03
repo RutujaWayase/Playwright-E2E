@@ -1,47 +1,15 @@
-<testsuites id="" name="" tests="3" failures="2" skipped="0" errors="0" time="64.278705">
-<testsuite name="Reporters.spec.js" timestamp="2026-07-03T08:59:36.061Z" hostname="chromium" tests="3" failures="2" skipped="0" time="55.587" errors="0">
-<testcase name="Test1" classname="Reporters.spec.js" time="40.847">
-<failure message="Reporters.spec.js:3:1 Test1" type="FAILURE">
-<![CDATA[  [chromium] › Reporters.spec.js:3:1 › Test1 ───────────────────────────────────────────────────────
-
-    Test timeout of 30000ms exceeded.
-
-    Error: page.goto: Test timeout of 30000ms exceeded.
-    Call log:
-      - navigating to "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login", waiting until "load"
-
-
-      2 |
-      3 | test('Test1', async ({page}) => {
-    > 4 |     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-        |                ^
-      5 |     await expect(page).toHaveTitle('OrangeHRM');
-      6 | })
-      7 | test('Test2', async ({page}) => {
-        at D:\2026 - Study\Playwright\Playwright-E2E\tests\Reporters.spec.js:4:16
-
-    attachment #1: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\Reporters-Test1-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
-    ..\test-results\Reporters-Test1-chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace ..\test-results\Reporters-Test1-chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
+<testsuites id="" name="" tests="3" failures="1" skipped="0" errors="0" time="25.884515999999998">
+<testsuite name="Reporters.spec.js" timestamp="2026-07-03T09:21:37.984Z" hostname="chromium" tests="3" failures="1" skipped="0" time="19.046" errors="0">
+<testcase name="Test1" classname="Reporters.spec.js" time="3.457">
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\Reporters-Test1-chromium\video.webm]]
+[[ATTACHMENT|test-results\Reporters-Test1-chromium\test-finished-1.png]]
 
-[[ATTACHMENT|test-results\Reporters-Test1-chromium\trace.zip]]
+[[ATTACHMENT|test-results\Reporters-Test1-chromium\video.webm]]
 ]]>
 </system-out>
 </testcase>
-<testcase name="Test2" classname="Reporters.spec.js" time="6.283">
+<testcase name="Test2" classname="Reporters.spec.js" time="6.903">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|test-results\Reporters-Test2-chromium\test-finished-1.png]]
@@ -50,7 +18,7 @@
 ]]>
 </system-out>
 </testcase>
-<testcase name="Test3" classname="Reporters.spec.js" time="8.457">
+<testcase name="Test3" classname="Reporters.spec.js" time="8.686">
 <failure message="Reporters.spec.js:11:1 Test3" type="FAILURE">
 <![CDATA[  [chromium] › Reporters.spec.js:11:1 › Test3 ──────────────────────────────────────────────────────
 
