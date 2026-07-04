@@ -1,161 +1,189 @@
-<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="27.423037000000004">
-<testsuite name="RetryTest.spec.js" timestamp="2026-07-04T11:13:23.772Z" hostname="chromium" tests="1" failures="1" skipped="0" time="8.08" errors="0">
-<testcase name="test" classname="RetryTest.spec.js" time="8.08">
-<failure message="RetryTest.spec.js:7:5 test" type="FAILURE">
-<![CDATA[  [chromium] › RetryTest.spec.js:7:5 › test ────────────────────────────────────────────────────────
+<testsuites id="" name="" tests="4" failures="4" skipped="0" errors="0" time="14.191929">
+<testsuite name="APITests.spec.js" timestamp="2026-07-04T12:00:48.528Z" hostname="chromium" tests="4" failures="4" skipped="0" time="2.493" errors="0">
+<testcase name="Get users" classname="APITests.spec.js" time="0.786">
+<failure message="APITests.spec.js:5:1 Get users" type="FAILURE">
+<![CDATA[  [chromium] › APITests.spec.js:5:1 › Get users ────────────────────────────────────────────────────
 
-    TypeError: Cannot read properties of undefined (reading 'goto')
+    Error: expect(received).toBe(expected) // Object.is equality
 
-       at pages\LoginPage.js:13
+    Expected: 200
+    Received: 401
 
-      11 |
-      12 |     async gotoLoginPage() {
-    > 13 |         await this.page.goto('https://www.demoblaze.com/index.html');
-         |                         ^
-      14 |     }
-      15 |
-      16 |     async login(username, password){
-        at LoginPage.gotoLoginPage (D:\2026 - Study\Playwright\Playwright-E2E\tests\pages\LoginPage.js:13:25)
-        at D:\2026 - Study\Playwright\Playwright-E2E\tests\RetryTest.spec.js:11:17
+       6 |     const reaponse = await request.get('https://reqres.in/api/users?page=2')
+       7 |     console.log(await reaponse.json())
+    >  8 |     expect(reaponse.status()).toBe(200)
+         |                               ^
+       9 | })
+      10 |
+      11 | test("Create user", async ({request}) => {
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\APITests.spec.js:8:31
 
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium\trace.zip
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\APITests-Get-users-chromium\trace.zip
     Usage:
 
-        npx playwright show-trace ..\test-results\RetryTest-test-chromium\trace.zip
+        npx playwright show-trace ..\test-results\APITests-Get-users-chromium\trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[{
+  error: [32m'missing_api_key'[39m,
+  message: [32m'The x-api-key header is required for this endpoint.'[39m,
+  hint: [32m'Create a free key at app.reqres.in and send it as x-api-key.'[39m,
+  next_steps: [
+    [32m'Go to app.reqres.in/api-keys to get your key'[39m,
+    [32m'Add header: x-api-key: <your_key>'[39m,
+    [32m'For app user endpoints, use Authorization: Bearer <session_token> instead'[39m
+  ],
+  docs_url: [32m'https://app.reqres.in/docs#authentication'[39m,
+  example_curl: [32m'curl -H "x-api-key: YOUR_API_KEY" https://api.reqres.in/api/collections'[39m,
+  _meta: {
+    powered_by: [32m'ReqRes'[39m,
+    docs_url: [32m'https://app.reqres.in/documentation'[39m,
+    upgrade_url: [32m'https://app.reqres.in/upgrade'[39m,
+    example_url: [32m'https://app.reqres.in/examples/notes-app'[39m,
+    variant: [32m'v1_a'[39m,
+    message: [32m'API key invalid or revoked. Create a new key in API Keys.'[39m,
+    cta: { label: [32m'Get a key'[39m, url: [32m'https://app.reqres.in/api-keys'[39m },
+    context: [32m'invalid_key'[39m
+  }
+}
 
-    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+[[ATTACHMENT|test-results\APITests-Get-users-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Create user" classname="APITests.spec.js" time="0.541">
+<failure message="APITests.spec.js:11:1 Create user" type="FAILURE">
+<![CDATA[  [chromium] › APITests.spec.js:11:1 › Create user ─────────────────────────────────────────────────
 
-    TypeError: Cannot read properties of undefined (reading 'goto')
+    Error: expect(received).toBe(expected) // Object.is equality
 
-       at pages\LoginPage.js:13
+    Expected: 201
+    Received: 401
 
-      11 |
-      12 |     async gotoLoginPage() {
-    > 13 |         await this.page.goto('https://www.demoblaze.com/index.html');
-         |                         ^
-      14 |     }
-      15 |
-      16 |     async login(username, password){
-        at LoginPage.gotoLoginPage (D:\2026 - Study\Playwright\Playwright-E2E\tests\pages\LoginPage.js:13:25)
-        at D:\2026 - Study\Playwright\Playwright-E2E\tests\RetryTest.spec.js:11:17
+      17 |     );
+      18 |     console.log(await response.json())
+    > 19 |     expect(response.status()).toBe(201)
+         |                               ^
+      20 |
+      21 |     var res = await response.json()
+      22 |     userid = res.id
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\APITests.spec.js:19:31
 
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium-retry1\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium-retry1\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium-retry1\trace.zip
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\APITests-Create-user-chromium\trace.zip
     Usage:
 
-        npx playwright show-trace ..\test-results\RetryTest-test-chromium-retry1\trace.zip
+        npx playwright show-trace ..\test-results\APITests-Create-user-chromium\trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[{
+  error: [32m'missing_api_key'[39m,
+  message: [32m'The x-api-key header is required for this endpoint.'[39m,
+  hint: [32m'Create a free key at app.reqres.in and send it as x-api-key.'[39m,
+  next_steps: [
+    [32m'Go to app.reqres.in/api-keys to get your key'[39m,
+    [32m'Add header: x-api-key: <your_key>'[39m,
+    [32m'For app user endpoints, use Authorization: Bearer <session_token> instead'[39m
+  ],
+  docs_url: [32m'https://app.reqres.in/docs#authentication'[39m,
+  example_curl: [32m'curl -H "x-api-key: YOUR_API_KEY" https://api.reqres.in/api/collections'[39m,
+  _meta: {
+    powered_by: [32m'ReqRes'[39m,
+    docs_url: [32m'https://app.reqres.in/documentation'[39m,
+    upgrade_url: [32m'https://app.reqres.in/upgrade'[39m,
+    example_url: [32m'https://app.reqres.in/examples/notes-app'[39m,
+    variant: [32m'v1_a'[39m,
+    message: [32m'API key invalid or revoked. Create a new key in API Keys.'[39m,
+    cta: { label: [32m'Get a key'[39m, url: [32m'https://app.reqres.in/api-keys'[39m },
+    context: [32m'invalid_key'[39m
+  }
+}
 
-    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+[[ATTACHMENT|test-results\APITests-Create-user-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Update user" classname="APITests.spec.js" time="0.552">
+<failure message="APITests.spec.js:25:1 Update user" type="FAILURE">
+<![CDATA[  [chromium] › APITests.spec.js:25:1 › Update user ─────────────────────────────────────────────────
 
-    TypeError: Cannot read properties of undefined (reading 'goto')
+    Error: expect(received).toBe(expected) // Object.is equality
 
-       at pages\LoginPage.js:13
+    Expected: 200
+    Received: 404
 
-      11 |
-      12 |     async gotoLoginPage() {
-    > 13 |         await this.page.goto('https://www.demoblaze.com/index.html');
-         |                         ^
-      14 |     }
-      15 |
-      16 |     async login(username, password){
-        at LoginPage.gotoLoginPage (D:\2026 - Study\Playwright\Playwright-E2E\tests\pages\LoginPage.js:13:25)
-        at D:\2026 - Study\Playwright\Playwright-E2E\tests\RetryTest.spec.js:11:17
+      31 |     );
+      32 |     console.log(await response.json())
+    > 33 |     expect(response.status()).toBe(200)
+         |                               ^
+      34 |
+      35 | })
+      36 |
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\APITests.spec.js:33:31
 
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium-retry2\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium-retry2\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium-retry2\trace.zip
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\APITests-Update-user-chromium\trace.zip
     Usage:
 
-        npx playwright show-trace ..\test-results\RetryTest-test-chromium-retry2\trace.zip
+        npx playwright show-trace ..\test-results\APITests-Update-user-chromium\trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[{
+  error: [32m'endpoint_not_found'[39m,
+  message: [32m'The endpoint PUT /api/usersundefined does not exist.'[39m,
+  hint: [32m'Admin endpoints require an API key. Check the endpoint path matches the API reference.'[39m,
+  available_endpoints: {
+    [32m'/api/collections'[39m: [32m'List/create collections (admin)'[39m,
+    [32m'/api/collections/:slug/records'[39m: [32m'List/create records (admin)'[39m,
+    [32m'/api/app-users'[39m: [32m'Manage app users'[39m,
+    [32m'/api/app-users/login'[39m: [32m'Send magic link to app user'[39m,
+    [32m'/api/app-users/verify'[39m: [32m'Verify magic link token'[39m
+  },
+  auth_required: [32m'x-api-key: <your_api_key>'[39m
+}
 
-    Retry #3 ───────────────────────────────────────────────────────────────────────────────────────
+[[ATTACHMENT|test-results\APITests-Update-user-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Delete user" classname="APITests.spec.js" time="0.614">
+<failure message="APITests.spec.js:37:1 Delete user" type="FAILURE">
+<![CDATA[  [chromium] › APITests.spec.js:37:1 › Delete user ─────────────────────────────────────────────────
 
-    TypeError: Cannot read properties of undefined (reading 'goto')
+    Error: expect(received).toBe(expected) // Object.is equality
 
-       at pages\LoginPage.js:13
+    Expected: 204
+    Received: 401
 
-      11 |
-      12 |     async gotoLoginPage() {
-    > 13 |         await this.page.goto('https://www.demoblaze.com/index.html');
-         |                         ^
-      14 |     }
-      15 |
-      16 |     async login(username, password){
-        at LoginPage.gotoLoginPage (D:\2026 - Study\Playwright\Playwright-E2E\tests\pages\LoginPage.js:13:25)
-        at D:\2026 - Study\Playwright\Playwright-E2E\tests\RetryTest.spec.js:11:17
+      37 | test("Delete user", async ({request}) => {
+      38 |     const response = await request.delete('https://reqres.in/api/users'+ userid)
+    > 39 |     expect(response.status()).toBe(204)
+         |                               ^
+      40 | })
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\APITests.spec.js:39:31
 
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium-retry3\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium-retry3\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
-    ..\test-results\RetryTest-test-chromium-retry3\trace.zip
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\APITests-Delete-user-chromium\trace.zip
     Usage:
 
-        npx playwright show-trace ..\test-results\RetryTest-test-chromium-retry3\trace.zip
+        npx playwright show-trace ..\test-results\APITests-Delete-user-chromium\trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </failure>
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\RetryTest-test-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|test-results\RetryTest-test-chromium\video.webm]]
-
-[[ATTACHMENT|test-results\RetryTest-test-chromium\trace.zip]]
-
-[[ATTACHMENT|test-results\RetryTest-test-chromium-retry1\test-failed-1.png]]
-
-[[ATTACHMENT|test-results\RetryTest-test-chromium-retry1\video.webm]]
-
-[[ATTACHMENT|test-results\RetryTest-test-chromium-retry1\trace.zip]]
-
-[[ATTACHMENT|test-results\RetryTest-test-chromium-retry2\test-failed-1.png]]
-
-[[ATTACHMENT|test-results\RetryTest-test-chromium-retry2\video.webm]]
-
-[[ATTACHMENT|test-results\RetryTest-test-chromium-retry2\trace.zip]]
-
-[[ATTACHMENT|test-results\RetryTest-test-chromium-retry3\test-failed-1.png]]
-
-[[ATTACHMENT|test-results\RetryTest-test-chromium-retry3\video.webm]]
-
-[[ATTACHMENT|test-results\RetryTest-test-chromium-retry3\trace.zip]]
+[[ATTACHMENT|test-results\APITests-Delete-user-chromium\trace.zip]]
 ]]>
 </system-out>
 </testcase>

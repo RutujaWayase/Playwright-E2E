@@ -309,7 +309,11 @@ Refer => https://playwright.dev/docs/test-retries#retries
 # Give failing tests 3 retry attempts
 npx playwright test --retries=3
 
+24) Rest API Testing:
 
+![alt text](image-8.png)
+
+Set 'fullyParallel: false,' in playwright.config.js file => To run test as per priority or listed order as provided.
 
 
 

@@ -1,0 +1,13 @@
+{
+  error: 'endpoint_not_found',
+  message: 'The endpoint PUT /api/usersundefined does not exist.',
+  hint: 'Admin endpoints require an API key. Check the endpoint path matches the API reference.',
+  available_endpoints: {
+    '/api/collections': 'List/create collections (admin)',
+    '/api/collections/:slug/records': 'List/create records (admin)',
+    '/api/app-users': 'Manage app users',
+    '/api/app-users/login': 'Send magic link to app user',
+    '/api/app-users/verify': 'Verify magic link token'
+  },
+  auth_required: 'x-api-key: <your_api_key>'
+}
