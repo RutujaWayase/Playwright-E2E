@@ -18,7 +18,7 @@
       {
         "outputDir": "D:/2026 - Study/Playwright/Playwright-E2E/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 3,
         "metadata": {
           "actualWorkers": 1
         },
@@ -34,7 +34,7 @@
       {
         "outputDir": "D:/2026 - Study/Playwright/Playwright-E2E/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 3,
         "metadata": {
           "actualWorkers": 1
         },
@@ -50,7 +50,7 @@
       {
         "outputDir": "D:/2026 - Study/Playwright/Playwright-E2E/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 3,
         "metadata": {
           "actualWorkers": 1
         },
@@ -108,103 +108,13 @@
   },
   "suites": [
     {
-      "title": "Reporters.spec.js",
-      "file": "Reporters.spec.js",
+      "title": "RetryTest.spec.js",
+      "file": "RetryTest.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Test1",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 3457,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-03T09:21:40.536Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\Reporters-Test1-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\Reporters-Test1-chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "399bcd1299f62012f68d-95434237692cbd161c3b",
-          "file": "Reporters.spec.js",
-          "line": 3,
-          "column": 1
-        },
-        {
-          "title": "Test2",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 6903,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-03T09:21:46.477Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\Reporters-Test2-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\Reporters-Test2-chromium\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "399bcd1299f62012f68d-064de90a5d2bda0e3e44",
-          "file": "Reporters.spec.js",
-          "line": 7,
-          "column": 1
-        },
-        {
-          "title": "Test3",
+          "title": "test",
           "ok": false,
           "tags": [],
           "tests": [
@@ -219,57 +129,211 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "failed",
-                  "duration": 8686,
+                  "duration": 3357,
                   "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce\"\u001b[39m\nReceived: \u001b[31m\"Just a moment...\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Just a moment...\"\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce\"\u001b[39m\nReceived: \u001b[31m\"Just a moment...\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Just a moment...\"\u001b[22m\n\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\Reporters.spec.js:13:24",
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at LoginPage.gotoLoginPage (D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js:13:25)\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\RetryTest.spec.js:11:17",
                     "location": {
-                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\Reporters.spec.js",
-                      "column": 24,
+                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                      "column": 25,
                       "line": 13
                     },
-                    "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m test(\u001b[32m'Test3'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}) \u001b[33m=>\u001b[39m {\n \u001b[90m 12 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.nopcommerce.com/en'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[32m'Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m })\u001b[0m"
+                    "snippet": "\u001b[90m   at \u001b[39mpages\\LoginPage.js:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36masync\u001b[39m gotoLoginPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.demoblaze.com/index.html'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m     }\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36masync\u001b[39m login(username\u001b[33m,\u001b[39m password){\u001b[0m"
                   },
                   "errors": [
                     {
                       "location": {
-                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\Reporters.spec.js",
-                        "column": 24,
+                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                        "column": 25,
                         "line": 13
                       },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected: \u001b[32m\"Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce\"\u001b[39m\nReceived: \u001b[31m\"Just a moment...\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Just a moment...\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 11 |\u001b[39m test(\u001b[32m'Test3'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}) \u001b[33m=>\u001b[39m {\n \u001b[90m 12 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.nopcommerce.com/en'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[32m'Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m })\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\Reporters.spec.js:13:24\u001b[22m"
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n\u001b[90m   at \u001b[39mpages\\LoginPage.js:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36masync\u001b[39m gotoLoginPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.demoblaze.com/index.html'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m     }\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36masync\u001b[39m login(username\u001b[33m,\u001b[39m password){\u001b[0m\n\u001b[2m    at LoginPage.gotoLoginPage (D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js:13:25)\u001b[22m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\RetryTest.spec.js:11:17\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-03T09:21:53.411Z",
+                  "startTime": "2026-07-04T11:13:26.468Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\Reporters-Test3-chromium\\test-failed-1.png"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium\\test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\Reporters-Test3-chromium\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\Reporters-Test3-chromium\\error-context.md"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium\\video.webm"
                     },
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\Reporters-Test3-chromium\\trace.zip"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium\\trace.zip"
                     }
                   ],
                   "errorLocation": {
-                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\Reporters.spec.js",
-                    "column": 24,
+                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                    "column": 25,
+                    "line": 13
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1598,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at LoginPage.gotoLoginPage (D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js:13:25)\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\RetryTest.spec.js:11:17",
+                    "location": {
+                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                      "column": 25,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mpages\\LoginPage.js:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36masync\u001b[39m gotoLoginPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.demoblaze.com/index.html'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m     }\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36masync\u001b[39m login(username\u001b[33m,\u001b[39m password){\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                        "column": 25,
+                        "line": 13
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n\u001b[90m   at \u001b[39mpages\\LoginPage.js:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36masync\u001b[39m gotoLoginPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.demoblaze.com/index.html'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m     }\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36masync\u001b[39m login(username\u001b[33m,\u001b[39m password){\u001b[0m\n\u001b[2m    at LoginPage.gotoLoginPage (D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js:13:25)\u001b[22m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\RetryTest.spec.js:11:17\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2026-07-04T11:13:35.847Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium-retry1\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                    "column": 25,
+                    "line": 13
+                  }
+                },
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1447,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at LoginPage.gotoLoginPage (D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js:13:25)\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\RetryTest.spec.js:11:17",
+                    "location": {
+                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                      "column": 25,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mpages\\LoginPage.js:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36masync\u001b[39m gotoLoginPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.demoblaze.com/index.html'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m     }\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36masync\u001b[39m login(username\u001b[33m,\u001b[39m password){\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                        "column": 25,
+                        "line": 13
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n\u001b[90m   at \u001b[39mpages\\LoginPage.js:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36masync\u001b[39m gotoLoginPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.demoblaze.com/index.html'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m     }\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36masync\u001b[39m login(username\u001b[33m,\u001b[39m password){\u001b[0m\n\u001b[2m    at LoginPage.gotoLoginPage (D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js:13:25)\u001b[22m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\RetryTest.spec.js:11:17\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2026-07-04T11:13:41.082Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium-retry2\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium-retry2\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium-retry2\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                    "column": 25,
+                    "line": 13
+                  }
+                },
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1678,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'goto')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'goto')\n    at LoginPage.gotoLoginPage (D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js:13:25)\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\RetryTest.spec.js:11:17",
+                    "location": {
+                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                      "column": 25,
+                      "line": 13
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mpages\\LoginPage.js:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36masync\u001b[39m gotoLoginPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.demoblaze.com/index.html'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m     }\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36masync\u001b[39m login(username\u001b[33m,\u001b[39m password){\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                        "column": 25,
+                        "line": 13
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'goto')\n\n\u001b[90m   at \u001b[39mpages\\LoginPage.js:13\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36masync\u001b[39m gotoLoginPage() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.demoblaze.com/index.html'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m     }\n \u001b[90m 15 |\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36masync\u001b[39m login(username\u001b[33m,\u001b[39m password){\u001b[0m\n\u001b[2m    at LoginPage.gotoLoginPage (D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js:13:25)\u001b[22m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\RetryTest.spec.js:11:17\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 3,
+                  "startTime": "2026-07-04T11:13:46.481Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium-retry3\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium-retry3\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\RetryTest-test-chromium-retry3\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\pages\\LoginPage.js",
+                    "column": 25,
                     "line": 13
                   }
                 }
@@ -277,19 +341,19 @@
               "status": "unexpected"
             }
           ],
-          "id": "399bcd1299f62012f68d-6ef640acef5b31d772c8",
-          "file": "Reporters.spec.js",
-          "line": 11,
-          "column": 1
+          "id": "2c48ef0e88569fb8b334-a3619fc5a0cd52aa995a",
+          "file": "RetryTest.spec.js",
+          "line": 7,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-03T09:21:37.818Z",
-    "duration": 25884.516,
-    "expected": 2,
+    "startTime": "2026-07-04T11:13:21.877Z",
+    "duration": 27423.037000000004,
+    "expected": 0,
     "skipped": 0,
     "unexpected": 1,
     "flaky": 0

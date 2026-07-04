@@ -297,6 +297,21 @@ Command =>
 allure generate ./allure-results -o ./allure-report
 allure open ./allure-report
 
+23) Retries and Test Flakiness
+
+![alt text](image-7.png)
+
+retries: process.env.CI ? 2 : 0,
+retries: 1,
+
+Refer => https://playwright.dev/docs/test-retries#retries
+
+# Give failing tests 3 retry attempts
+npx playwright test --retries=3
+
+
+
+
 
 
 

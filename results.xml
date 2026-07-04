@@ -1,73 +1,161 @@
-<testsuites id="" name="" tests="3" failures="1" skipped="0" errors="0" time="25.884515999999998">
-<testsuite name="Reporters.spec.js" timestamp="2026-07-03T09:21:37.984Z" hostname="chromium" tests="3" failures="1" skipped="0" time="19.046" errors="0">
-<testcase name="Test1" classname="Reporters.spec.js" time="3.457">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\Reporters-Test1-chromium\test-finished-1.png]]
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="27.423037000000004">
+<testsuite name="RetryTest.spec.js" timestamp="2026-07-04T11:13:23.772Z" hostname="chromium" tests="1" failures="1" skipped="0" time="8.08" errors="0">
+<testcase name="test" classname="RetryTest.spec.js" time="8.08">
+<failure message="RetryTest.spec.js:7:5 test" type="FAILURE">
+<![CDATA[  [chromium] › RetryTest.spec.js:7:5 › test ────────────────────────────────────────────────────────
 
-[[ATTACHMENT|test-results\Reporters-Test1-chromium\video.webm]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Test2" classname="Reporters.spec.js" time="6.903">
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\Reporters-Test2-chromium\test-finished-1.png]]
+    TypeError: Cannot read properties of undefined (reading 'goto')
 
-[[ATTACHMENT|test-results\Reporters-Test2-chromium\video.webm]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Test3" classname="Reporters.spec.js" time="8.686">
-<failure message="Reporters.spec.js:11:1 Test3" type="FAILURE">
-<![CDATA[  [chromium] › Reporters.spec.js:11:1 › Test3 ──────────────────────────────────────────────────────
+       at pages\LoginPage.js:13
 
-    Error: expect(page).toHaveTitle(expected) failed
-
-    Expected: "Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce"
-    Received: "Just a moment..."
-    Timeout:  5000ms
-
-    Call log:
-      - Expect "toHaveTitle" with timeout 5000ms
-        9 × unexpected value "Just a moment..."
-
-
-      11 | test('Test3', async ({page}) => {
-      12 |     await page.goto('https://www.nopcommerce.com/en');
-    > 13 |     await expect(page).toHaveTitle('Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce');
-         |                        ^
-      14 | })
-        at D:\2026 - Study\Playwright\Playwright-E2E\tests\Reporters.spec.js:13:24
+      11 |
+      12 |     async gotoLoginPage() {
+    > 13 |         await this.page.goto('https://www.demoblaze.com/index.html');
+         |                         ^
+      14 |     }
+      15 |
+      16 |     async login(username, password){
+        at LoginPage.gotoLoginPage (D:\2026 - Study\Playwright\Playwright-E2E\tests\pages\LoginPage.js:13:25)
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\RetryTest.spec.js:11:17
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\Reporters-Test3-chromium\test-failed-1.png
+    ..\test-results\RetryTest-test-chromium\test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\Reporters-Test3-chromium\video.webm
+    ..\test-results\RetryTest-test-chromium\video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ..\test-results\Reporters-Test3-chromium\error-context.md
-
-    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    ..\test-results\Reporters-Test3-chromium\trace.zip
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-test-chromium\trace.zip
     Usage:
 
-        npx playwright show-trace ..\test-results\Reporters-Test3-chromium\trace.zip
+        npx playwright show-trace ..\test-results\RetryTest-test-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'goto')
+
+       at pages\LoginPage.js:13
+
+      11 |
+      12 |     async gotoLoginPage() {
+    > 13 |         await this.page.goto('https://www.demoblaze.com/index.html');
+         |                         ^
+      14 |     }
+      15 |
+      16 |     async login(username, password){
+        at LoginPage.gotoLoginPage (D:\2026 - Study\Playwright\Playwright-E2E\tests\pages\LoginPage.js:13:25)
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\RetryTest.spec.js:11:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-test-chromium-retry1\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-test-chromium-retry1\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-test-chromium-retry1\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\RetryTest-test-chromium-retry1\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #2 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'goto')
+
+       at pages\LoginPage.js:13
+
+      11 |
+      12 |     async gotoLoginPage() {
+    > 13 |         await this.page.goto('https://www.demoblaze.com/index.html');
+         |                         ^
+      14 |     }
+      15 |
+      16 |     async login(username, password){
+        at LoginPage.gotoLoginPage (D:\2026 - Study\Playwright\Playwright-E2E\tests\pages\LoginPage.js:13:25)
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\RetryTest.spec.js:11:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-test-chromium-retry2\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-test-chromium-retry2\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-test-chromium-retry2\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\RetryTest-test-chromium-retry2\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Retry #3 ───────────────────────────────────────────────────────────────────────────────────────
+
+    TypeError: Cannot read properties of undefined (reading 'goto')
+
+       at pages\LoginPage.js:13
+
+      11 |
+      12 |     async gotoLoginPage() {
+    > 13 |         await this.page.goto('https://www.demoblaze.com/index.html');
+         |                         ^
+      14 |     }
+      15 |
+      16 |     async login(username, password){
+        at LoginPage.gotoLoginPage (D:\2026 - Study\Playwright\Playwright-E2E\tests\pages\LoginPage.js:13:25)
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\RetryTest.spec.js:11:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-test-chromium-retry3\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-test-chromium-retry3\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\RetryTest-test-chromium-retry3\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\RetryTest-test-chromium-retry3\trace.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 ]]>
 </failure>
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\Reporters-Test3-chromium\test-failed-1.png]]
+[[ATTACHMENT|test-results\RetryTest-test-chromium\test-failed-1.png]]
 
-[[ATTACHMENT|test-results\Reporters-Test3-chromium\video.webm]]
+[[ATTACHMENT|test-results\RetryTest-test-chromium\video.webm]]
 
-[[ATTACHMENT|test-results\Reporters-Test3-chromium\error-context.md]]
+[[ATTACHMENT|test-results\RetryTest-test-chromium\trace.zip]]
 
-[[ATTACHMENT|test-results\Reporters-Test3-chromium\trace.zip]]
+[[ATTACHMENT|test-results\RetryTest-test-chromium-retry1\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\RetryTest-test-chromium-retry1\video.webm]]
+
+[[ATTACHMENT|test-results\RetryTest-test-chromium-retry1\trace.zip]]
+
+[[ATTACHMENT|test-results\RetryTest-test-chromium-retry2\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\RetryTest-test-chromium-retry2\video.webm]]
+
+[[ATTACHMENT|test-results\RetryTest-test-chromium-retry2\trace.zip]]
+
+[[ATTACHMENT|test-results\RetryTest-test-chromium-retry3\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\RetryTest-test-chromium-retry3\video.webm]]
+
+[[ATTACHMENT|test-results\RetryTest-test-chromium-retry3\trace.zip]]
 ]]>
 </system-out>
 </testcase>
