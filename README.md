@@ -315,6 +315,161 @@ npx playwright test --retries=3
 
 Set 'fullyParallel: false,' in playwright.config.js file => To run test as per priority or listed order as provided.
 
+## Course ##
+
+# Timeouts: https://playwright.dev/docs/test-timeouts
+By default test timeout is 30 sec and expect timeout is 5 sec.
+
+![alt text](image-9.png)
+
+Advanced: low level timeouts =>
+
+![alt text](image-10.png)
+
+Assertions
+expect(success).toBeTruthy();
+
+await expect(page.getByTestId('status')).toHaveText('Submitted');
+
+Auto-retrying assertions
+Assertion	Description
+await expect(locator).toBeAttached()
+Element is attached
+await expect(locator).toBeChecked()
+Checkbox is checked
+await expect(locator).toBeDisabled()
+Element is disabled
+await expect(locator).toBeEditable()
+Element is editable
+await expect(locator).toBeEmpty()
+Container is empty
+await expect(locator).toBeEnabled()
+Element is enabled
+await expect(locator).toBeFocused()
+Element is focused
+await expect(locator).toBeHidden()
+Element is not visible
+await expect(locator).toBeInViewport()
+Element intersects viewport
+await expect(locator).toBeVisible()
+Element is visible
+await expect(locator).toContainText()
+Element contains text
+await expect(locator).toContainClass()
+Element has specified CSS classes
+await expect(locator).toHaveAccessibleDescription()
+Element has a matching accessible description
+
+await expect(locator).toHaveAccessibleName()
+Element has a matching accessible name
+
+await expect(locator).toHaveAttribute()
+Element has a DOM attribute
+await expect(locator).toHaveClass()
+Element has specified CSS class property
+await expect(locator).toHaveCount()
+List has exact number of children
+await expect(locator).toHaveCSS()
+Element has CSS property
+await expect(locator).toHaveId()
+Element has an ID
+await expect(locator).toHaveJSProperty()
+Element has a JavaScript property
+await expect(locator).toHaveRole()
+Element has a specific ARIA role
+
+await expect(locator).toHaveScreenshot()
+Element has a screenshot
+await expect(locator).toHaveText()
+Element matches text
+await expect(locator).toHaveValue()
+Input has a value
+await expect(locator).toHaveValues()
+Select has options selected
+await expect(locator).toMatchAriaSnapshot()
+Element matches the Aria snapshot
+await expect(page).toMatchAriaSnapshot()
+Page matches the Aria snapshot
+await expect(page).toHaveScreenshot()
+Page has a screenshot
+await expect(page).toHaveTitle()
+Page has a title
+await expect(page).toHaveURL()
+Page has a URL
+await expect(response).toBeOK()
+Response has an OK status
+
+
+Non-retrying assertions
+
+Assertion	Description
+expect(value).toBe()
+Value is the same
+expect(value).toBeCloseTo()
+Number is approximately equal
+expect(value).toBeDefined()
+Value is not undefined
+expect(value).toBeFalsy()
+Value is falsy, e.g. false, 0, null, etc.
+expect(value).toBeGreaterThan()
+Number is more than
+expect(value).toBeGreaterThanOrEqual()
+Number is more than or equal
+expect(value).toBeInstanceOf()
+Object is an instance of a class
+expect(value).toBeLessThan()
+Number is less than
+expect(value).toBeLessThanOrEqual()
+Number is less than or equal
+expect(value).toBeNaN()
+Value is NaN
+expect(value).toBeNull()
+Value is null
+expect(value).toBeTruthy()
+Value is truthy, i.e. not false, 0, null, etc.
+expect(value).toBeUndefined()
+Value is undefined
+expect(value).toContain()
+String contains a substring
+expect(value).toContain()
+Array or set contains an element
+expect(value).toContainEqual()
+Array or set contains a similar element
+expect(value).toEqual()
+Value is similar - deep equality and pattern matching
+expect(value).toHaveLength()
+Array or string has length
+expect(value).toHaveProperty()
+Object has a property
+expect(value).toMatch()
+String matches a regular expression
+expect(value).toMatchObject()
+Object contains specified properties
+expect(value).toStrictEqual()
+Value is similar, including property types
+expect(value).toThrow()
+Function throws an error
+Asymmetric matchers
+
+Matcher	Description
+expect.any()
+Matches any instance of a class/primitive
+expect.anything()
+Matches anything
+expect.arrayContaining()
+Array contains specific elements
+expect.arrayOf()
+Array contains elements of specific type
+expect.closeTo()
+Number is approximately equal
+expect.objectContaining()
+Object contains specific properties
+expect.stringContaining()
+String contains a substring
+expect.stringMatching()
+String matches a regular expression
+
+
 
 
 

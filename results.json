@@ -108,14 +108,14 @@
   },
   "suites": [
     {
-      "title": "APITests.spec.js",
-      "file": "APITests.spec.js",
+      "title": "CoursePlaywright\\UIBasicstest.spec.js",
+      "file": "CoursePlaywright/UIBasicstest.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Get users",
-          "ok": false,
+          "title": "First Playwright test",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -128,257 +128,34 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 786,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m401\u001b[39m",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m401\u001b[39m\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js:8:31",
-                    "location": {
-                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                      "column": 31,
-                      "line": 8
-                    },
-                    "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m     \u001b[36mconst\u001b[39m reaponse \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://reqres.in/api/users?page=2'\u001b[39m)\n \u001b[90m  7 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m reaponse\u001b[33m.\u001b[39mjson())\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m     expect(reaponse\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m })\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m test(\u001b[32m\"Create user\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({request}) \u001b[33m=>\u001b[39m {\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                        "column": 31,
-                        "line": 8
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m401\u001b[39m\n\n\u001b[0m \u001b[90m  6 |\u001b[39m     \u001b[36mconst\u001b[39m reaponse \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://reqres.in/api/users?page=2'\u001b[39m)\n \u001b[90m  7 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m reaponse\u001b[33m.\u001b[39mjson())\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m     expect(reaponse\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m })\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m test(\u001b[32m\"Create user\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({request}) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js:8:31\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "{\n  error: \u001b[32m'missing_api_key'\u001b[39m,\n  message: \u001b[32m'The x-api-key header is required for this endpoint.'\u001b[39m,\n  hint: \u001b[32m'Create a free key at app.reqres.in and send it as x-api-key.'\u001b[39m,\n  next_steps: [\n    \u001b[32m'Go to app.reqres.in/api-keys to get your key'\u001b[39m,\n    \u001b[32m'Add header: x-api-key: <your_key>'\u001b[39m,\n    \u001b[32m'For app user endpoints, use Authorization: Bearer <session_token> instead'\u001b[39m\n  ],\n  docs_url: \u001b[32m'https://app.reqres.in/docs#authentication'\u001b[39m,\n  example_curl: \u001b[32m'curl -H \"x-api-key: YOUR_API_KEY\" https://api.reqres.in/api/collections'\u001b[39m,\n  _meta: {\n    powered_by: \u001b[32m'ReqRes'\u001b[39m,\n    docs_url: \u001b[32m'https://app.reqres.in/documentation'\u001b[39m,\n    upgrade_url: \u001b[32m'https://app.reqres.in/upgrade'\u001b[39m,\n    example_url: \u001b[32m'https://app.reqres.in/examples/notes-app'\u001b[39m,\n    variant: \u001b[32m'v1_a'\u001b[39m,\n    message: \u001b[32m'API key invalid or revoked. Create a new key in API Keys.'\u001b[39m,\n    cta: { label: \u001b[32m'Get a key'\u001b[39m, url: \u001b[32m'https://app.reqres.in/api-keys'\u001b[39m },\n    context: \u001b[32m'invalid_key'\u001b[39m\n  }\n}\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-04T12:00:52.033Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\APITests-Get-users-chromium\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                    "column": 31,
-                    "line": 8
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "c6e518dd64a90dc053d2-626a5d454fa0b6071a35",
-          "file": "APITests.spec.js",
-          "line": 5,
-          "column": 1
-        },
-        {
-          "title": "Create user",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 541,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m401\u001b[39m",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m401\u001b[39m\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js:19:31",
-                    "location": {
-                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                      "column": 31,
-                      "line": 19
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson())\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m201\u001b[39m)\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mvar\u001b[39m res \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\n \u001b[90m 22 |\u001b[39m     userid \u001b[33m=\u001b[39m res\u001b[33m.\u001b[39mid\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                        "column": 31,
-                        "line": 19
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m201\u001b[39m\nReceived: \u001b[31m401\u001b[39m\n\n\u001b[0m \u001b[90m 17 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson())\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m201\u001b[39m)\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mvar\u001b[39m res \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\n \u001b[90m 22 |\u001b[39m     userid \u001b[33m=\u001b[39m res\u001b[33m.\u001b[39mid\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js:19:31\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "{\n  error: \u001b[32m'missing_api_key'\u001b[39m,\n  message: \u001b[32m'The x-api-key header is required for this endpoint.'\u001b[39m,\n  hint: \u001b[32m'Create a free key at app.reqres.in and send it as x-api-key.'\u001b[39m,\n  next_steps: [\n    \u001b[32m'Go to app.reqres.in/api-keys to get your key'\u001b[39m,\n    \u001b[32m'Add header: x-api-key: <your_key>'\u001b[39m,\n    \u001b[32m'For app user endpoints, use Authorization: Bearer <session_token> instead'\u001b[39m\n  ],\n  docs_url: \u001b[32m'https://app.reqres.in/docs#authentication'\u001b[39m,\n  example_curl: \u001b[32m'curl -H \"x-api-key: YOUR_API_KEY\" https://api.reqres.in/api/collections'\u001b[39m,\n  _meta: {\n    powered_by: \u001b[32m'ReqRes'\u001b[39m,\n    docs_url: \u001b[32m'https://app.reqres.in/documentation'\u001b[39m,\n    upgrade_url: \u001b[32m'https://app.reqres.in/upgrade'\u001b[39m,\n    example_url: \u001b[32m'https://app.reqres.in/examples/notes-app'\u001b[39m,\n    variant: \u001b[32m'v1_a'\u001b[39m,\n    message: \u001b[32m'API key invalid or revoked. Create a new key in API Keys.'\u001b[39m,\n    cta: { label: \u001b[32m'Get a key'\u001b[39m, url: \u001b[32m'https://app.reqres.in/api-keys'\u001b[39m },\n    context: \u001b[32m'invalid_key'\u001b[39m\n  }\n}\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-04T12:00:55.724Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\APITests-Create-user-chromium\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                    "column": 31,
-                    "line": 19
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "c6e518dd64a90dc053d2-bb492044e9fddbfaee10",
-          "file": "APITests.spec.js",
-          "line": 11,
-          "column": 1
-        },
-        {
-          "title": "Update user",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 552,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js:33:31",
-                    "location": {
-                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                      "column": 31,
-                      "line": 33
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 31 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson())\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m })\n \u001b[90m 36 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                        "column": 31,
-                        "line": 33
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n\n\u001b[0m \u001b[90m 31 |\u001b[39m     )\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson())\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m })\n \u001b[90m 36 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js:33:31\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "{\n  error: \u001b[32m'endpoint_not_found'\u001b[39m,\n  message: \u001b[32m'The endpoint PUT /api/usersundefined does not exist.'\u001b[39m,\n  hint: \u001b[32m'Admin endpoints require an API key. Check the endpoint path matches the API reference.'\u001b[39m,\n  available_endpoints: {\n    \u001b[32m'/api/collections'\u001b[39m: \u001b[32m'List/create collections (admin)'\u001b[39m,\n    \u001b[32m'/api/collections/:slug/records'\u001b[39m: \u001b[32m'List/create records (admin)'\u001b[39m,\n    \u001b[32m'/api/app-users'\u001b[39m: \u001b[32m'Manage app users'\u001b[39m,\n    \u001b[32m'/api/app-users/login'\u001b[39m: \u001b[32m'Send magic link to app user'\u001b[39m,\n    \u001b[32m'/api/app-users/verify'\u001b[39m: \u001b[32m'Verify magic link token'\u001b[39m\n  },\n  auth_required: \u001b[32m'x-api-key: <your_api_key>'\u001b[39m\n}\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-04T12:00:58.421Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\APITests-Update-user-chromium\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                    "column": 31,
-                    "line": 33
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "c6e518dd64a90dc053d2-3324d3c8f344f989d417",
-          "file": "APITests.spec.js",
-          "line": 25,
-          "column": 1
-        },
-        {
-          "title": "Delete user",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 614,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m401\u001b[39m",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m401\u001b[39m\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js:39:31",
-                    "location": {
-                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                      "column": 31,
-                      "line": 39
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 37 |\u001b[39m test(\u001b[32m\"Delete user\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({request}) \u001b[33m=>\u001b[39m {\n \u001b[90m 38 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39m\u001b[36mdelete\u001b[39m(\u001b[32m'https://reqres.in/api/users'\u001b[39m\u001b[33m+\u001b[39m userid)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m204\u001b[39m)\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m })\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                        "column": 31,
-                        "line": 39
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m401\u001b[39m\n\n\u001b[0m \u001b[90m 37 |\u001b[39m test(\u001b[32m\"Delete user\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({request}) \u001b[33m=>\u001b[39m {\n \u001b[90m 38 |\u001b[39m     \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m request\u001b[33m.\u001b[39m\u001b[36mdelete\u001b[39m(\u001b[32m'https://reqres.in/api/users'\u001b[39m\u001b[33m+\u001b[39m userid)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m204\u001b[39m)\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m })\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js:39:31\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 12445,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-04T12:01:01.676Z",
+                  "startTime": "2026-07-05T11:03:17.207Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\APITests-Delete-user-chromium\\trace.zip"
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-First-Playwright-test-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-First-Playwright-test-chromium\\video.webm"
                     }
-                  ],
-                  "errorLocation": {
-                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\APITests.spec.js",
-                    "column": 31,
-                    "line": 39
-                  }
+                  ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "c6e518dd64a90dc053d2-da09cda14bb0fac92802",
-          "file": "APITests.spec.js",
-          "line": 37,
+          "id": "2a0ded5e2a041cc6c151-dfc531563ef3e7151d78",
+          "file": "CoursePlaywright/UIBasicstest.spec.js",
+          "line": 3,
           "column": 1
         }
       ]
@@ -386,11 +163,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-04T12:00:48.343Z",
-    "duration": 14191.929,
-    "expected": 0,
+    "startTime": "2026-07-05T11:03:14.369Z",
+    "duration": 18545.269,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 4,
+    "unexpected": 0,
     "flaky": 0
   }
 }
