@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "chromium",
         "name": "chromium",
@@ -36,7 +36,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "firefox",
         "name": "firefox",
@@ -52,7 +52,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "webkit",
         "name": "webkit",
@@ -114,7 +114,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "First Playwright test",
+          "title": "Browser Context Playwright test",
           "ok": true,
           "tags": [],
           "tests": [
@@ -129,23 +129,22 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12445,
+                  "duration": 5727,
                   "errors": [],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "LoginPage Practise | Rahul Shetty Academy\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-05T11:03:17.207Z",
+                  "startTime": "2026-07-06T01:29:56.198Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-First-Playwright-test-chromium\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-First-Playwright-test-chromium\\video.webm"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test-chromium\\test-finished-1.png"
                     }
                   ]
                 }
@@ -153,9 +152,259 @@
               "status": "expected"
             }
           ],
-          "id": "2a0ded5e2a041cc6c151-dfc531563ef3e7151d78",
+          "id": "2a0ded5e2a041cc6c151-271032bbf75bbba6ff77",
           "file": "CoursePlaywright/UIBasicstest.spec.js",
           "line": 3,
+          "column": 1
+        },
+        {
+          "title": "Page Playwright test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6214,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Google\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T01:30:05.277Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test-chromium\\test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test-chromium\\test-finished-2.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test-chromium\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2a0ded5e2a041cc6c151-f9bb276c708a7f2a8edd",
+          "file": "CoursePlaywright/UIBasicstest.spec.js",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "Browser Context Playwright test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 16943,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "LoginPage Practise | Rahul Shetty Academy\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T01:29:56.197Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test-firefox\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2a0ded5e2a041cc6c151-d6e22eeb05ddf5a4a32a",
+          "file": "CoursePlaywright/UIBasicstest.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "Page Playwright test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12189,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Google\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T01:30:18.028Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test-firefox\\test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test-firefox\\test-finished-2.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test-firefox\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2a0ded5e2a041cc6c151-4ac17200971b9833149c",
+          "file": "CoursePlaywright/UIBasicstest.spec.js",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "Browser Context Playwright test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 13780,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "LoginPage Practise | Rahul Shetty Academy\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T01:29:56.192Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test-webkit\\test-finished-1.png"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2a0ded5e2a041cc6c151-0b6fc1897a394fcdfc8b",
+          "file": "CoursePlaywright/UIBasicstest.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "Page Playwright test",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 15150,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Google\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-07-06T01:30:17.944Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test-webkit\\test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test-webkit\\test-finished-2.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test-webkit\\video.webm"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2a0ded5e2a041cc6c151-ad695fe38d910a8158c0",
+          "file": "CoursePlaywright/UIBasicstest.spec.js",
+          "line": 11,
           "column": 1
         }
       ]
@@ -163,9 +412,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-05T11:03:14.369Z",
-    "duration": 18545.269,
-    "expected": 1,
+    "startTime": "2026-07-06T01:29:51.492Z",
+    "duration": 44190.721,
+    "expected": 6,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

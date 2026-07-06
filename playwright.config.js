@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices, firefox } from '@playwright/test';
 
 /**
  * Read environment variables from file.
@@ -45,7 +45,9 @@ export default defineConfig({
     //screenshot: "only-on-failure",
     //video: "retain-on-failure",
     screenshot: "on",
-    video: "on"
+    video: "on",
+    //browserName: 'firefox',
+    //headless: true
   },
 
   /* Configure projects for major browsers */

@@ -1,11 +1,66 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="18.545269">
-<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-05T11:03:14.577Z" hostname="chromium" tests="1" failures="0" skipped="0" time="12.445" errors="0">
-<testcase name="First Playwright test" classname="CoursePlaywright\UIBasicstest.spec.js" time="12.445">
+<testsuites id="" name="" tests="6" failures="0" skipped="0" errors="0" time="44.190720999999996">
+<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-06T01:29:51.584Z" hostname="chromium" tests="2" failures="0" skipped="0" time="11.941" errors="0">
+<testcase name="Browser Context Playwright test" classname="CoursePlaywright\UIBasicstest.spec.js" time="5.727">
 <system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-First-Playwright-test-chromium\test-finished-1.png]]
+<![CDATA[LoginPage Practise | Rahul Shetty Academy
 
-[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-First-Playwright-test-chromium\video.webm]]
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test-chromium\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Page Playwright test" classname="CoursePlaywright\UIBasicstest.spec.js" time="6.214">
+<system-out>
+<![CDATA[Google
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test-chromium\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test-chromium\test-finished-2.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test-chromium\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-06T01:29:51.584Z" hostname="firefox" tests="2" failures="0" skipped="0" time="29.132" errors="0">
+<testcase name="Browser Context Playwright test" classname="CoursePlaywright\UIBasicstest.spec.js" time="16.943">
+<system-out>
+<![CDATA[LoginPage Practise | Rahul Shetty Academy
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test-firefox\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Page Playwright test" classname="CoursePlaywright\UIBasicstest.spec.js" time="12.189">
+<system-out>
+<![CDATA[Google
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test-firefox\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test-firefox\test-finished-2.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test-firefox\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-06T01:29:51.584Z" hostname="webkit" tests="2" failures="0" skipped="0" time="28.93" errors="0">
+<testcase name="Browser Context Playwright test" classname="CoursePlaywright\UIBasicstest.spec.js" time="13.78">
+<system-out>
+<![CDATA[LoginPage Practise | Rahul Shetty Academy
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test-webkit\test-finished-1.png]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Page Playwright test" classname="CoursePlaywright\UIBasicstest.spec.js" time="15.15">
+<system-out>
+<![CDATA[Google
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test-webkit\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test-webkit\test-finished-2.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test-webkit\video.webm]]
 ]]>
 </system-out>
 </testcase>
