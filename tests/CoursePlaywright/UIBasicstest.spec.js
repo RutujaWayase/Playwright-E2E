@@ -6,10 +6,21 @@ test('Browser Context Playwright test', async ({browser}) => {
     const page = await context.newPage();
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
     console.log(await page.title());
+
     // css type, fill
-    await page.locator("#username").fill("rahulshettyacamdemy");
-    await page.locator("[type='password']").fill("Learning@830$3mK2");
+
+    // positive scenario
+    // await page.locator("#username").fill("rahulshettyacamdemy");
+    // await page.locator("[type='password']").fill("Learning@830$3mK2");
+    // await page.locator("#signInBtn").click();
+
+    // negative scenario
+    await page.locator("#username").fill("rahulshetty");
+    await page.locator("[type='password']").fill("learning");
     await page.locator("#signInBtn").click();
+    //webdriverwait
+    console.log(await page.locator("[style*='block']").textContent());
+    await expect(page.locator("[style*='block']")).toContainText('Incorrect');
 });
 
 test('Page Playwright test', async ({page}) => {
