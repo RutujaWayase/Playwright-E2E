@@ -357,3 +357,4 @@ await expect(page.getByText('Welcome, John!')).toBeVisible();
 
 2 methods used to pass data in ccs => type, fill
 But as per latest version of playwright type method has been deprecated and only fill method is used.
+
