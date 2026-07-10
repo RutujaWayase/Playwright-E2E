@@ -1,23 +1,13 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="19.687209">
-<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-06T02:40:19.548Z" hostname="" tests="2" failures="0" skipped="0" time="14.275" errors="0">
-<testcase name="Browser Context Playwright test" classname="CoursePlaywright\UIBasicstest.spec.js" time="8.896">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="15.966502">
+<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-10T01:08:31.514Z" hostname="" tests="1" failures="0" skipped="0" time="10.551" errors="0">
+<testcase name="Browser Context - Validating Error login" classname="CoursePlaywright\UIBasicstest.spec.js" time="10.551">
 <system-out>
 <![CDATA[LoginPage Practise | Rahul Shetty Academy
 Incorrect username/password.
+iphone X
+Samsung Note 8
 
-[[ATTACHMENT|test-results\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test\test-finished-1.png]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Page Playwright test" classname="CoursePlaywright\UIBasicstest.spec.js" time="5.379">
-<system-out>
-<![CDATA[Google
-
-[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test\test-finished-1.png]]
-
-[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test\test-finished-2.png]]
-
-[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test\video.webm]]
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicst-4e131-xt---Validating-Error-login\test-finished-1.png]]
 ]]>
 </system-out>
 </testcase>
