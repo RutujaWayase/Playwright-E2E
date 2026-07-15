@@ -1,11 +1,10 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="15.966502">
-<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-10T01:08:31.514Z" hostname="" tests="1" failures="0" skipped="0" time="10.551" errors="0">
-<testcase name="Browser Context - Validating Error login" classname="CoursePlaywright\UIBasicstest.spec.js" time="10.551">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="34.166412">
+<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-15T01:39:24.653Z" hostname="" tests="1" failures="0" skipped="0" time="24.224" errors="0">
+<testcase name="Browser Context - Validating Error login" classname="CoursePlaywright\UIBasicstest.spec.js" time="24.224">
 <system-out>
 <![CDATA[LoginPage Practise | Rahul Shetty Academy
 Incorrect username/password.
-iphone X
-Samsung Note 8
+[]
 
 [[ATTACHMENT|test-results\CoursePlaywright-UIBasicst-4e131-xt---Validating-Error-login\test-finished-1.png]]
 ]]>

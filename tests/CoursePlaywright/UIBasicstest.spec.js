@@ -38,8 +38,9 @@ test.only('Browser Context - Validating Error login', async ({browser}) => {
     const userName = page.locator('#username');
     const password = page.locator('#password');
     const signIn = page.locator('#signInBtn');
+    const cardTitles = page.locator(".card-body a");
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
-    console.log(await page.title());
+    console.log(await page.title()); 
 
     //css 
     await userName.fill("rahulshetty");
@@ -53,6 +54,10 @@ test.only('Browser Context - Validating Error login', async ({browser}) => {
     await userName.fill("rahulshettyacademy");
     await password.fill("Learning@830$3mK2");
     await signIn.click();
-    console.log(await page.locator(".card-body a").first().textContent());
-    console.log(await page.locator(".card-body a").nth(1).textContent());
+    //console.log(await page.locator(".card-body a").first().textContent());
+    //console.log(await page.locator( ).nth(1).textContent());
+    const allTiltles = await cardTitles.allTextContents();
+
+    console.log(allTiltles);
+
 })

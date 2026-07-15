@@ -97,7 +97,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10551,
+                  "duration": 24224,
                   "errors": [],
                   "stdout": [
                     {
@@ -107,15 +107,12 @@
                       "text": "Incorrect username/password.\n"
                     },
                     {
-                      "text": "iphone X\n"
-                    },
-                    {
-                      "text": "Samsung Note 8\n"
+                      "text": "[]\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-10T01:08:34.513Z",
+                  "startTime": "2026-07-15T01:39:29.837Z",
                   "annotations": [],
                   "attachments": [
                     {
@@ -139,8 +136,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-10T01:08:31.334Z",
-    "duration": 15966.502,
+    "startTime": "2026-07-15T01:39:24.180Z",
+    "duration": 34166.412000000004,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
