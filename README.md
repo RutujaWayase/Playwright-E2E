@@ -371,31 +371,60 @@ element is Stable, as in not animating or completed animation
 element Receives Events, as in not obscured by other elements
 element is Enabled
 
+| Action                           | Visible | Stable | Receives Events | Enabled | Editable |
+|----------------------------------|:-------:|:------:|:---------------:|:-------:|:--------:|
+| `locator.check()`                | ✅ Yes  | ✅ Yes | ✅ Yes          | ✅ Yes  | ➖ |
+| `locator.click()`                | ✅ Yes  | ✅ Yes | ✅ Yes          | ✅ Yes  | ➖ |
+| `locator.dblclick()`             | ✅ Yes  | ✅ Yes | ✅ Yes          | ✅ Yes  | ➖ |
+| `locator.setChecked()`           | ✅ Yes  | ✅ Yes | ✅ Yes          | ✅ Yes  | ➖ |
+| `locator.tap()`                  | ✅ Yes  | ✅ Yes | ✅ Yes          | ✅ Yes  | ➖ |
+| `locator.uncheck()`              | ✅ Yes  | ✅ Yes | ✅ Yes          | ✅ Yes  | ➖ |
+| `locator.hover()`                | ✅ Yes  | ✅ Yes | ✅ Yes          | ➖ | ➖ |
+| `locator.dragTo()`               | ✅ Yes  | ✅ Yes | ✅ Yes          | ➖ | ➖ |
+| `locator.screenshot()`           | ✅ Yes  | ✅ Yes | ➖ | ➖ | ➖ |
+| `locator.fill()`                 | ✅ Yes  | ➖ | ➖ | ✅ Yes  | ✅ Yes |
+| `locator.clear()`                | ✅ Yes  | ➖ | ➖ | ✅ Yes  | ✅ Yes |
+| `locator.selectOption()`         | ✅ Yes  | ➖ | ➖ | ✅ Yes  | ➖ |
+| `locator.selectText()`           | ✅ Yes  | ➖ | ➖ | ➖ | ➖ |
+| `locator.scrollIntoViewIfNeeded()` | ➖ | ✅ Yes | ➖ | ➖ | ➖ |
+| `locator.blur()`                 | ➖ | ➖ | ➖ | ➖ | ➖ |
+| `locator.dispatchEvent()`        | ➖ | ➖ | ➖ | ➖ | ➖ |
+| `locator.focus()`                | ➖ | ➖ | ➖ | ➖ | ➖ |
+| `locator.press()`                | ➖ | ➖ | ➖ | ➖ | ➖ |
+| `locator.pressSequentially()`    | ➖ | ➖ | ➖ | ➖ | ➖ |
+| `locator.setInputFiles()`        | ➖ | ➖ | ➖ | ➖ | ➖ |
+
+
 Assertions:
 
-Assertion	Description
-expect(locator).toBeAttached()	Element is attached
-expect(locator).toBeChecked()	Checkbox is checked
-expect(locator).toBeDisabled()	Element is disabled
-expect(locator).toBeEditable()	Element is editable
-expect(locator).toBeEmpty()	Container is empty
-expect(locator).toBeEnabled()	Element is enabled
-expect(locator).toBeFocused()	Element is focused
-expect(locator).toBeHidden()	Element is not visible
-expect(locator).toBeInViewport()	Element intersects viewport
-expect(locator).toBeVisible()	Element is visible
-expect(locator).toContainText()	Element contains text
-expect(locator).toHaveAttribute()	Element has a DOM attribute
-expect(locator).toHaveClass()	Element has a class property
-expect(locator).toHaveCount()	List has exact number of children
-expect(locator).toHaveCSS()	Element has CSS property
-expect(locator).toHaveId()	Element has an ID
-expect(locator).toHaveJSProperty()	Element has a JavaScript property
-expect(locator).toHaveText()	Element matches text
-expect(locator).toHaveValue()	Input has a value
-expect(locator).toHaveValues()	Select has options selected
-expect(page).toHaveTitle()	Page has a title
-expect(page).toHaveURL()	Page has a URL
-expect(response).toBeOK()	Response has an OK status
+| Assertion | Description |
+|------------|-------------|
+| `expect(locator).toBeAttached()` | Element is attached |
+| `expect(locator).toBeChecked()` | Checkbox is checked |
+| `expect(locator).toBeDisabled()` | Element is disabled |
+| `expect(locator).toBeEditable()` | Element is editable |
+| `expect(locator).toBeEmpty()` | Container is empty |
+| `expect(locator).toBeEnabled()` | Element is enabled |
+| `expect(locator).toBeFocused()` | Element is focused |
+| `expect(locator).toBeHidden()` | Element is not visible |
+| `expect(locator).toBeInViewport()` | Element intersects the viewport |
+| `expect(locator).toBeVisible()` | Element is visible |
+| `expect(locator).toContainText()` | Element contains the expected text |
+| `expect(locator).toHaveAttribute()` | Element has the specified DOM attribute |
+| `expect(locator).toHaveClass()` | Element has the expected class |
+| `expect(locator).toHaveCount()` | Locator resolves to the expected number of elements |
+| `expect(locator).toHaveCSS()` | Element has the expected CSS property |
+| `expect(locator).toHaveId()` | Element has the expected ID |
+| `expect(locator).toHaveJSProperty()` | Element has the expected JavaScript property |
+| `expect(locator).toHaveText()` | Element text matches the expected value |
+| `expect(locator).toHaveValue()` | Input has the expected value |
+| `expect(locator).toHaveValues()` | Select element has the expected selected options |
+| `expect(page).toHaveTitle()` | Page has the expected title |
+| `expect(page).toHaveURL()` | Page has the expected URL |
+| `expect(response).toBeOK()` | Response has an OK (2xx) status |
+
+
+
+
 
 
