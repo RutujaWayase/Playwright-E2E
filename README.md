@@ -358,3 +358,14 @@ await expect(page.getByText('Welcome, John!')).toBeVisible();
 2 methods used to pass data in ccs => type, fill
 But as per latest version of playwright type method has been deprecated and only fill method is used.
 
+# Waits => Auto - waiting
+Refer: https://playwright.dev/docs/actionability
+
+for locator.click(), Playwright will ensure that:
+
+locator resolves to exactly one element
+element is Visible
+element is Stable, as in not animating or completed animation
+element Receives Events, as in not obscured by other elements
+element is Enabled
+
