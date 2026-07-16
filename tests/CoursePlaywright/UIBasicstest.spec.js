@@ -32,7 +32,7 @@ test('Page Playwright test', async ({page}) => {
 
 
 
-test.only('Browser Context - Validating Error login', async ({browser}) => {
+test('Browser Context - Validating Error login', async ({browser}) => {
     const context = await browser.newContext();
     const page = await context.newPage();
     const userName = page.locator('#username');
@@ -60,4 +60,19 @@ test.only('Browser Context - Validating Error login', async ({browser}) => {
 
     console.log(allTiltles);
 
+})
+
+test.only('UI Controls', async ({page}) => {
+    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+    const userName = page.locator('#username');
+    const password = page.locator('#password');
+    const signIn = page.locator('#signInBtn');
+    const dropdown = page.locator("select.form-control");
+    await dropdown.selectOption("Consultant");
+    await page.locator(".radiotextsty").last().click();
+    await page.locator("#okayBtn").click();
+
+    //assertion
+
+    await page.pause();
 })

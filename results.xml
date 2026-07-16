@@ -1,24 +1,8 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="22.792953999999998">
-<testsuite name="CoursePlaywright\ClientApp.spec.js" timestamp="2026-07-16T02:03:31.881Z" hostname="" tests="1" failures="0" skipped="0" time="8.731" errors="0">
-<testcase name="Browser contxt-validation error login" classname="CoursePlaywright\ClientApp.spec.js" time="8.731">
-<system-out>
-<![CDATA[[
-  [32m'ADIDAS ORIGINAL'[39m,
-  [32m'ZARA COAT 3'[39m,
-  [32m'iphone 13 pro'[39m,
-  [32m'qwerty'[39m,
-  [32m'car'[39m,
-  [32m'iPhone QA Max'[39m,
-  [32m'{{productName}}'[39m,
-  [32m'Laptop'[39m,
-  [32m'Laptop'[39m
-]
-
-[[ATTACHMENT|test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\test-finished-1.png]]
-
-[[ATTACHMENT|test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\video.webm]]
-]]>
-</system-out>
+<testsuites id="" name="" tests="1" failures="0" skipped="1" errors="0" time="18.26479">
+<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-16T02:31:55.787Z" hostname="" tests="1" failures="0" skipped="1" time="13.663" errors="0">
+<testcase name="UI Controls" classname="CoursePlaywright\UIBasicstest.spec.js" time="13.663">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
 </testsuites>
