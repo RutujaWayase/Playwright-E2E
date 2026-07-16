@@ -423,6 +423,13 @@ Assertions:
 | `expect(page).toHaveURL()` | Page has the expected URL |
 | `expect(response).toBeOK()` | Response has an OK (2xx) status |
 
+Example:
+
+Approach 1: Wait for Network tab =>
+   await page.waitForLoadState('networkidle');
+
+Approach 2: Directly applying wait to an element
+   await page.locator(".card-body b").first().waitFor();
 
 
 

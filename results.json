@@ -76,13 +76,13 @@
   },
   "suites": [
     {
-      "title": "CoursePlaywright\\UIBasicstest.spec.js",
-      "file": "CoursePlaywright/UIBasicstest.spec.js",
+      "title": "CoursePlaywright\\ClientApp.spec.js",
+      "file": "CoursePlaywright/ClientApp.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Browser Context - Validating Error login",
+          "title": "Browser contxt-validation error login",
           "ok": true,
           "tags": [],
           "tests": [
@@ -97,28 +97,27 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 24224,
+                  "duration": 8731,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "LoginPage Practise | Rahul Shetty Academy\n"
-                    },
-                    {
-                      "text": "Incorrect username/password.\n"
-                    },
-                    {
-                      "text": "[]\n"
+                      "text": "[\n  \u001b[32m'ADIDAS ORIGINAL'\u001b[39m,\n  \u001b[32m'ZARA COAT 3'\u001b[39m,\n  \u001b[32m'iphone 13 pro'\u001b[39m,\n  \u001b[32m'qwerty'\u001b[39m,\n  \u001b[32m'car'\u001b[39m,\n  \u001b[32m'iPhone QA Max'\u001b[39m,\n  \u001b[32m'{{productName}}'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m\n]\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-15T01:39:29.837Z",
+                  "startTime": "2026-07-16T02:03:37.964Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicst-4e131-xt---Validating-Error-login\\test-finished-1.png"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\video.webm"
                     }
                   ]
                 }
@@ -126,9 +125,9 @@
               "status": "expected"
             }
           ],
-          "id": "2a0ded5e2a041cc6c151-0ad109d7406ef087ee9a",
-          "file": "CoursePlaywright/UIBasicstest.spec.js",
-          "line": 35,
+          "id": "a86f18d8c6d8eca5fd8c-ca948439b820fb310f13",
+          "file": "CoursePlaywright/ClientApp.spec.js",
+          "line": 3,
           "column": 6
         }
       ]
@@ -136,8 +135,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-15T01:39:24.180Z",
-    "duration": 34166.412000000004,
+    "startTime": "2026-07-16T02:03:31.172Z",
+    "duration": 22792.953999999998,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
