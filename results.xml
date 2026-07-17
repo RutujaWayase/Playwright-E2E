@@ -1,12 +1,14 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.021048">
-<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-17T01:34:35.961Z" hostname="" tests="1" failures="0" skipped="0" time="5.593" errors="0">
-<testcase name="UI Controls" classname="CoursePlaywright\UIBasicstest.spec.js" time="5.593">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.811738">
+<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-17T02:29:05.516Z" hostname="" tests="1" failures="0" skipped="0" time="7.171" errors="0">
+<testcase name="@Child windows handle" classname="CoursePlaywright\UIBasicstest.spec.js" time="7.171">
 <system-out>
-<![CDATA[[33mtrue[39m
+<![CDATA[Please email us at mentor@rahulshettyacademy.com with below template to receive response 
+rahulshettyacademy.com
+rahulshettyacademy.com
 
-[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-UI-Controls\test-finished-1.png]]
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest--Child-windows-handle\test-finished-1.png]]
 
-[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-UI-Controls\video.webm]]
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest--Child-windows-handle\test-finished-2.png]]
 ]]>
 </system-out>
 </testcase>

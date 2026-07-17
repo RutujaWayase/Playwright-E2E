@@ -1,4 +1,5 @@
-const {test, expect} = require('@playwright/test')
+const {test, expect} = require('@playwright/test');
+const { text } = require('node:stream/consumers');
 
 test('Browser Context Playwright test', async ({browser}) => {
     //chrome - plugins/cookies
@@ -62,7 +63,7 @@ test('Browser Context - Validating Error login', async ({browser}) => {
 
 })
 
-test.only('UI Controls', async ({page}) => {
+test('UI Controls', async ({page}) => {
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
     const userName = page.locator('#username');
     const password = page.locator('#password');
@@ -83,4 +84,28 @@ test.only('UI Controls', async ({page}) => {
     //assertion
 
     //await page.pause();
+})
+
+test.only('@Child windows handle', async ({browser}) => {
+    const context = await browser.newContext();
+    const page = await context.newPage();
+    const userName = page.locator('#username');
+    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+    const documentlink = page.locator("[href*='documents-request']");
+
+    //Javascript array
+    const [newPage] = await Promise.all([
+        context.waitForEvent('page'), //listen for any new page pending, rejected, fulfilled
+        documentlink.click(), //new page is opened
+    ])
+    
+    const text = await newPage.locator("//p[@class='im-para red']").textContent();
+    console.log(text);
+    const arrayText = text.split("@");
+    const domain = arrayText[1].split(" ")[0];
+    console.log(domain);
+    await page.locator("#username").fill(domain);
+    //await page.pause();
+    console.log(await page.locator("#username").inputValue());
+
 })
