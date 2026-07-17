@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="11.737354">
-<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-17T01:12:53.436Z" hostname="" tests="1" failures="0" skipped="0" time="7.78" errors="0">
-<testcase name="UI Controls" classname="CoursePlaywright\UIBasicstest.spec.js" time="7.78">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.021048">
+<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-17T01:34:35.961Z" hostname="" tests="1" failures="0" skipped="0" time="5.593" errors="0">
+<testcase name="UI Controls" classname="CoursePlaywright\UIBasicstest.spec.js" time="5.593">
 <system-out>
 <![CDATA[[33mtrue[39m
 

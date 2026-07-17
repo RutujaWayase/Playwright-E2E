@@ -67,6 +67,7 @@ test.only('UI Controls', async ({page}) => {
     const userName = page.locator('#username');
     const password = page.locator('#password');
     const signIn = page.locator('#signInBtn');
+    const documentlink = page.locator("[href*='documents-request']");
     const dropdown = page.locator("select.form-control");
     await dropdown.selectOption("Consultant");
     await page.locator(".radiotextsty").last().click();
@@ -77,6 +78,7 @@ test.only('UI Controls', async ({page}) => {
     await expect(page.locator("#terms")).toBeChecked();
     await page.locator("#terms").uncheck();
     expect(await page.locator("#terms").isChecked()).toBeFalsy();
+    await expect(documentlink).toHaveAttribute("class", "blinkingText");
 
     //assertion
 
