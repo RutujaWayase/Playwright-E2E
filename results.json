@@ -96,9 +96,17 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 7502,
-                  "errors": [],
+                  "status": "interrupted",
+                  "duration": 16816,
+                  "error": {
+                    "message": "Error: apiRequestContext._wrapApiCall: Target page, context or browser has been closed",
+                    "stack": "Error: apiRequestContext._wrapApiCall: Target page, context or browser has been closed"
+                  },
+                  "errors": [
+                    {
+                      "message": "Error: apiRequestContext._wrapApiCall: Target page, context or browser has been closed"
+                    }
+                  ],
                   "stdout": [
                     {
                       "text": "[\n  \u001b[32m'ADIDAS ORIGINAL'\u001b[39m,\n  \u001b[32m'ZARA COAT 3'\u001b[39m,\n  \u001b[32m'iphone 13 pro'\u001b[39m,\n  \u001b[32m'qwerty'\u001b[39m,\n  \u001b[32m'car'\u001b[39m,\n  \u001b[32m'iPhone QA Max'\u001b[39m,\n  \u001b[32m'{{productName}}'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m\n]\n"
@@ -106,23 +114,18 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-18T02:23:06.574Z",
+                  "startTime": "2026-07-18T02:46:01.030Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\video.webm"
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\trace.zip"
                     }
                   ]
                 }
               ],
-              "status": "expected"
+              "status": "skipped"
             }
           ],
           "id": "a86f18d8c6d8eca5fd8c-ca948439b820fb310f13",
@@ -135,10 +138,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-18T02:23:03.525Z",
-    "duration": 11857.018,
-    "expected": 1,
-    "skipped": 0,
+    "startTime": "2026-07-18T02:45:58.962Z",
+    "duration": 19835.565,
+    "expected": 0,
+    "skipped": 1,
     "unexpected": 0,
     "flaky": 0
   }

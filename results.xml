@@ -1,24 +1,8 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="11.857018">
-<testsuite name="CoursePlaywright\ClientApp.spec.js" timestamp="2026-07-18T02:23:03.801Z" hostname="" tests="1" failures="0" skipped="0" time="7.502" errors="0">
-<testcase name="Browser contxt-validation error login" classname="CoursePlaywright\ClientApp.spec.js" time="7.502">
-<system-out>
-<![CDATA[[
-  [32m'ADIDAS ORIGINAL'[39m,
-  [32m'ZARA COAT 3'[39m,
-  [32m'iphone 13 pro'[39m,
-  [32m'qwerty'[39m,
-  [32m'car'[39m,
-  [32m'iPhone QA Max'[39m,
-  [32m'{{productName}}'[39m,
-  [32m'Laptop'[39m,
-  [32m'Laptop'[39m
-]
-
-[[ATTACHMENT|test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\test-finished-1.png]]
-
-[[ATTACHMENT|test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\video.webm]]
-]]>
-</system-out>
+<testsuites id="" name="" tests="1" failures="0" skipped="1" errors="0" time="19.835565">
+<testsuite name="CoursePlaywright\ClientApp.spec.js" timestamp="2026-07-18T02:45:59.085Z" hostname="" tests="1" failures="0" skipped="1" time="16.816" errors="0">
+<testcase name="Browser contxt-validation error login" classname="CoursePlaywright\ClientApp.spec.js" time="16.816">
+<skipped>
+</skipped>
 </testcase>
 </testsuite>
 </testsuites>
