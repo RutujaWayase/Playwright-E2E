@@ -76,17 +76,15 @@
   },
   "suites": [
     {
-      "title": "CoursePlaywright\\UIBasicstest.spec.js",
-      "file": "CoursePlaywright/UIBasicstest.spec.js",
+      "title": "CoursePlaywright\\ClientApp.spec.js",
+      "file": "CoursePlaywright/ClientApp.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "@Child windows handle",
+          "title": "Browser contxt-validation error login",
           "ok": true,
-          "tags": [
-            "Child"
-          ],
+          "tags": [],
           "tests": [
             {
               "timeout": 30000,
@@ -99,33 +97,27 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7171,
+                  "duration": 7502,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Please email us at mentor@rahulshettyacademy.com with below template to receive response \n"
-                    },
-                    {
-                      "text": "rahulshettyacademy.com\n"
-                    },
-                    {
-                      "text": "rahulshettyacademy.com\n"
+                      "text": "[\n  \u001b[32m'ADIDAS ORIGINAL'\u001b[39m,\n  \u001b[32m'ZARA COAT 3'\u001b[39m,\n  \u001b[32m'iphone 13 pro'\u001b[39m,\n  \u001b[32m'qwerty'\u001b[39m,\n  \u001b[32m'car'\u001b[39m,\n  \u001b[32m'iPhone QA Max'\u001b[39m,\n  \u001b[32m'{{productName}}'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m\n]\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-17T02:29:07.714Z",
+                  "startTime": "2026-07-18T02:23:06.574Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest--Child-windows-handle\\test-finished-1.png"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\test-finished-1.png"
                     },
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest--Child-windows-handle\\test-finished-2.png"
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\video.webm"
                     }
                   ]
                 }
@@ -133,9 +125,9 @@
               "status": "expected"
             }
           ],
-          "id": "2a0ded5e2a041cc6c151-dfda4a9c99c0ed4821cd",
-          "file": "CoursePlaywright/UIBasicstest.spec.js",
-          "line": 89,
+          "id": "a86f18d8c6d8eca5fd8c-ca948439b820fb310f13",
+          "file": "CoursePlaywright/ClientApp.spec.js",
+          "line": 3,
           "column": 6
         }
       ]
@@ -143,8 +135,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-17T02:29:05.345Z",
-    "duration": 10811.738,
+    "startTime": "2026-07-18T02:23:03.525Z",
+    "duration": 11857.018,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
