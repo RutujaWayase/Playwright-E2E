@@ -432,6 +432,10 @@ Approach 2: Directly applying wait to an element
    await page.locator(".card-body b").first().waitFor();
 
 
+# Playwright UI Runner:
+
+npx playwright test --ui 
+
 
 
 

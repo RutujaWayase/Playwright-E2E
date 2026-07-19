@@ -1,23 +1,13 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="8.769885">
-<testsuite name="CoursePlaywright\ClientApp.spec.js" timestamp="2026-07-19T02:07:33.349Z" hostname="" tests="1" failures="0" skipped="0" time="6.14" errors="0">
-<testcase name="@Gen Client App login" classname="CoursePlaywright\ClientApp.spec.js" time="6.14">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="9.318596999999999">
+<testsuite name="CoursePlaywright\IIc.spec.js" timestamp="2026-07-19T07:24:56.402Z" hostname="" tests="1" failures="0" skipped="0" time="3.045" errors="0">
+<testcase name="Playwright Special locators" classname="CoursePlaywright\IIc.spec.js" time="3.045">
 <system-out>
-<![CDATA[[
-  [32m'ADIDAS ORIGINAL'[39m,
-  [32m'ZARA COAT 3'[39m,
-  [32m'iphone 13 pro'[39m,
-  [32m'qwerty'[39m,
-  [32m'car'[39m,
-  [32m'iPhone QA Max'[39m,
-  [32m'{{productName}}'[39m,
-  [32m'Laptop'[39m,
-  [32m'Laptop'[39m
-]
- | 6a5c316d85b8849b49f6a11e | 
+<![CDATA[
+[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Special-locators\test-finished-1.png]]
 
-[[ATTACHMENT|test-results\CoursePlaywright-ClientApp--Gen-Client-App-login\test-finished-1.png]]
+[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Special-locators\video.webm]]
 
-[[ATTACHMENT|test-results\CoursePlaywright-ClientApp--Gen-Client-App-login\video.webm]]
+[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Special-locators\trace.zip]]
 ]]>
 </system-out>
 </testcase>
