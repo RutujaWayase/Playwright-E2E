@@ -82,9 +82,11 @@
       "line": 0,
       "specs": [
         {
-          "title": "Browser contxt-validation error login",
+          "title": "@Gen Client App login",
           "ok": true,
-          "tags": [],
+          "tags": [
+            "Gen"
+          ],
           "tests": [
             {
               "timeout": 30000,
@@ -96,41 +98,41 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "interrupted",
-                  "duration": 16816,
-                  "error": {
-                    "message": "Error: apiRequestContext._wrapApiCall: Target page, context or browser has been closed",
-                    "stack": "Error: apiRequestContext._wrapApiCall: Target page, context or browser has been closed"
-                  },
-                  "errors": [
-                    {
-                      "message": "Error: apiRequestContext._wrapApiCall: Target page, context or browser has been closed"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 6140,
+                  "errors": [],
                   "stdout": [
                     {
                       "text": "[\n  \u001b[32m'ADIDAS ORIGINAL'\u001b[39m,\n  \u001b[32m'ZARA COAT 3'\u001b[39m,\n  \u001b[32m'iphone 13 pro'\u001b[39m,\n  \u001b[32m'qwerty'\u001b[39m,\n  \u001b[32m'car'\u001b[39m,\n  \u001b[32m'iPhone QA Max'\u001b[39m,\n  \u001b[32m'{{productName}}'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m\n]\n"
+                    },
+                    {
+                      "text": " | 6a5c316d85b8849b49f6a11e | \n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-18T02:46:01.030Z",
+                  "startTime": "2026-07-19T02:07:35.127Z",
                   "annotations": [],
                   "attachments": [
                     {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\trace.zip"
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp--Gen-Client-App-login\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp--Gen-Client-App-login\\video.webm"
                     }
                   ]
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
-          "id": "a86f18d8c6d8eca5fd8c-ca948439b820fb310f13",
+          "id": "a86f18d8c6d8eca5fd8c-945eee32013374e9baac",
           "file": "CoursePlaywright/ClientApp.spec.js",
-          "line": 3,
+          "line": 58,
           "column": 6
         }
       ]
@@ -138,10 +140,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-18T02:45:58.962Z",
-    "duration": 19835.565,
-    "expected": 0,
-    "skipped": 1,
+    "startTime": "2026-07-19T02:07:33.294Z",
+    "duration": 8769.885,
+    "expected": 1,
+    "skipped": 0,
     "unexpected": 0,
     "flaky": 0
   }
