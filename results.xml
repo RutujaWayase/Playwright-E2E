@@ -1,13 +1,11 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="9.318596999999999">
-<testsuite name="CoursePlaywright\IIc.spec.js" timestamp="2026-07-19T07:24:56.402Z" hostname="" tests="1" failures="0" skipped="0" time="3.045" errors="0">
-<testcase name="Playwright Special locators" classname="CoursePlaywright\IIc.spec.js" time="3.045">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="15.297399">
+<testsuite name="CoursePlaywright\IIc.spec.js" timestamp="2026-07-19T07:41:49.005Z" hostname="" tests="1" failures="0" skipped="0" time="8.108" errors="0">
+<testcase name="Playwright Special locators" classname="CoursePlaywright\IIc.spec.js" time="8.108">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Special-locators\test-finished-1.png]]
 
 [[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Special-locators\video.webm]]
-
-[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Special-locators\trace.zip]]
 ]]>
 </system-out>
 </testcase>
