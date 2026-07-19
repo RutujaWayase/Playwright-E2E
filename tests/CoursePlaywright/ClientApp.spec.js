@@ -115,6 +115,21 @@ test.only('@Gen Client App login', async ({page}) => {
     await expect(page.locator(".hero-primary")).toHaveText(" Thankyou for the order. ");
     const orderID = await page.locator(".em-spacer-1 .ng-star-inserted").textContent();
     console.log(orderID);
+    await page.locator("button[routerlink*='myorders']").click();
+    const rows = await page.locator("tbody tr");
+
+    for(let i=0; i<await rows.count(); ++i)
+    {
+        const rowOrderId = await rows.nth(i).locator("th").textContent();
+        if(orderID.includes(orderID))
+        {
+            await rows.nth(i).locator("button").first().click();
+            break;
+        }
+    }
+
+    const orderIdDetails = await page.locator(".col-text").textContent();
+    expect(orderID.includes(orderIdDetails)).toBeTruthy();
   
     //await page.pause();
 
