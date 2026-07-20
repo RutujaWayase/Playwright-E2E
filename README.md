@@ -438,7 +438,17 @@ npx playwright test --ui
 
 # Timeout
 
+Step level & Global level=>
+
+![alt text](image-13.png)
+
 ![alt text](image-11.png)
+
+Test level Global timeout =>
+
+![alt text](image-12.png)
+
+
 
 
 
