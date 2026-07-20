@@ -436,6 +436,10 @@ Approach 2: Directly applying wait to an element
 
 npx playwright test --ui 
 
+# Timeout
+
+![alt text](image-11.png)
+
 
 
 
