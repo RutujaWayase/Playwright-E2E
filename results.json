@@ -76,15 +76,17 @@
   },
   "suites": [
     {
-      "title": "CoursePlaywright\\IIc.spec.js",
-      "file": "CoursePlaywright/IIc.spec.js",
+      "title": "CoursePlaywright\\ClientAppOtherWay.spec.js",
+      "file": "CoursePlaywright/ClientAppOtherWay.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Playwright Special locators",
+          "title": "@Webst Client App login",
           "ok": true,
-          "tags": [],
+          "tags": [
+            "Webst"
+          ],
           "tests": [
             {
               "timeout": 30000,
@@ -97,23 +99,23 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8108,
+                  "duration": 9858,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-19T07:41:52.859Z",
+                  "startTime": "2026-07-20T13:48:03.008Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-IIc-Playwright-Special-locators\\test-finished-1.png"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-IIc-Playwright-Special-locators\\video.webm"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\\video.webm"
                     }
                   ]
                 }
@@ -121,18 +123,18 @@
               "status": "expected"
             }
           ],
-          "id": "6e37b8d08d04502dee06-a677578807e315d88c85",
-          "file": "CoursePlaywright/IIc.spec.js",
-          "line": 3,
-          "column": 5
+          "id": "ab303c5a3bca3a01f5a4-5eb7963d19911d523a0c",
+          "file": "CoursePlaywright/ClientAppOtherWay.spec.js",
+          "line": 6,
+          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-19T07:41:48.751Z",
-    "duration": 15297.399000000001,
+    "startTime": "2026-07-20T13:48:00.998Z",
+    "duration": 19029.667,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
