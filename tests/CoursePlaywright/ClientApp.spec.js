@@ -55,7 +55,7 @@ test('Browser contxt-validation error login', async ({page}) => {
 
 })
 
-test.only('@Gen Client App login', async ({page}) => {
+test('@Gen Client App login', async ({page}) => {
 
     //js file - Login js, DashboardPage
     const email = "anshika@gmail.com";

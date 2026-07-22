@@ -537,7 +537,19 @@ Test → "How long can the whole thing run?" → 30s default, the ultimate ceili
 
 ![alt text](image-17.png)
 
+# Codegen => Recording
 
+npx playwright codegen url
+
+![alt text](image-19.png)
+
+![alt text](image-18.png)
+
+# Screenshot:
+
+![alt text](image-20.png)
+
+![alt text](image-21.png)
 
 
 

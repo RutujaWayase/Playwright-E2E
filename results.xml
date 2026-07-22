@@ -1,11 +1,339 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="19.029667">
-<testsuite name="CoursePlaywright\ClientAppOtherWay.spec.js" timestamp="2026-07-20T13:48:01.164Z" hostname="" tests="1" failures="0" skipped="0" time="9.858" errors="0">
-<testcase name="@Webst Client App login" classname="CoursePlaywright\ClientAppOtherWay.spec.js" time="9.858">
+<testsuites id="" name="" tests="10" failures="5" skipped="0" errors="0" time="158.273098">
+<testsuite name="CoursePlaywright\ClientApp.spec.js" timestamp="2026-07-22T02:46:00.830Z" hostname="" tests="2" failures="1" skipped="0" time="88.392" errors="0">
+<testcase name="Browser contxt-validation error login" classname="CoursePlaywright\ClientApp.spec.js" time="58.327">
+<failure message="ClientApp.spec.js:3:1 Browser contxt-validation error login" type="FAILURE">
+<![CDATA[  CoursePlaywright\ClientApp.spec.js:3:1 › Browser contxt-validation error login ───────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[[
+  [32m'ADIDAS ORIGINAL'[39m,
+  [32m'ZARA COAT 3'[39m,
+  [32m'iphone 13 pro'[39m,
+  [32m'qwerty'[39m,
+  [32m'car'[39m,
+  [32m'iPhone QA Max'[39m,
+  [32m'{{productName}}'[39m,
+  [32m'Laptop'[39m,
+  [32m'Laptop'[39m
+]
+
+[[ATTACHMENT|test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\video.webm]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\error-context.md]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="@Gen Client App login" classname="CoursePlaywright\ClientApp.spec.js" time="30.065">
+<system-out>
+<![CDATA[[
+  [32m'ADIDAS ORIGINAL'[39m,
+  [32m'ZARA COAT 3'[39m,
+  [32m'iphone 13 pro'[39m,
+  [32m'qwerty'[39m,
+  [32m'car'[39m,
+  [32m'iPhone QA Max'[39m,
+  [32m'{{productName}}'[39m,
+  [32m'Laptop'[39m,
+  [32m'Laptop'[39m
+]
+ | 6a602f5585b8849b4901599f | 
+
+[[ATTACHMENT|test-results\CoursePlaywright-ClientApp--Gen-Client-App-login\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-ClientApp--Gen-Client-App-login\video.webm]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-ClientApp--Gen-Client-App-login\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="CoursePlaywright\ClientAppOtherWay.spec.js" timestamp="2026-07-22T02:46:00.830Z" hostname="" tests="1" failures="1" skipped="0" time="59.176" errors="0">
+<testcase name="@Webst Client App login" classname="CoursePlaywright\ClientAppOtherWay.spec.js" time="59.176">
+<failure message="ClientAppOtherWay.spec.js:6:1 @Webst Client App login" type="FAILURE">
+<![CDATA[  CoursePlaywright\ClientAppOtherWay.spec.js:6:1 › @Webst Client App login ─────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
 <system-out>
 <![CDATA[
-[[ATTACHMENT|test-results\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\test-finished-1.png]]
+[[ATTACHMENT|test-results\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\test-failed-1.png]]
 
 [[ATTACHMENT|test-results\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\video.webm]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\error-context.md]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="CoursePlaywright\IIc.spec.js" timestamp="2026-07-22T02:46:00.830Z" hostname="" tests="2" failures="2" skipped="0" time="51.966" errors="0">
+<testcase name="Playwright Special locators" classname="CoursePlaywright\IIc.spec.js" time="42.523">
+<failure message="IIc.spec.js:3:5 Playwright Special locators" type="FAILURE">
+<![CDATA[  CoursePlaywright\IIc.spec.js:3:5 › Playwright Special locators ───────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for getByLabel('Check me out if you Love IceCreams!')
+        - locator resolved to <input type="checkbox" id="exampleCheck1" class="form-check-input"/>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - performing click action
+
+
+      3 | test('Playwright Special locators', async ({page}) => {
+      4 |     await page.goto("https://rahulshettyacademy.com/angularpractice/");
+    > 5 |     await page.getByLabel("Check me out if you Love IceCreams!").click();
+        |                                                                  ^
+      6 |     await page.getByLabel("Employed").check();
+      7 |     await page.getByLabel("Gender").selectOption("Female");
+      8 |     await page.getByPlaceholder("Password").fill("abc123");
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\CoursePlaywright\IIc.spec.js:5:66
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-IIc-Playwright-Special-locators\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-IIc-Playwright-Special-locators\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\CoursePlaywright-IIc-Playwright-Special-locators\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-IIc-Playwright-Special-locators\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\CoursePlaywright-IIc-Playwright-Special-locators\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Special-locators\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Special-locators\video.webm]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Special-locators\error-context.md]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Special-locators\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Playwright Test level time out" classname="CoursePlaywright\IIc.spec.js" time="9.443">
+<failure message="IIc.spec.js:22:5 Playwright Test level time out" type="FAILURE">
+<![CDATA[  CoursePlaywright\IIc.spec.js:22:5 › Playwright Test level time out ───────────────────────────────
+
+    Test timeout of 6000ms exceeded.
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('.my-4').first()
+    Expected: "Shop"
+    Received: "Shop Name"
+
+    Call log:
+      - Expect "toHaveText" with timeout 9000ms
+      - waiting for locator('.my-4').first()
+        5 × locator resolved to <h1 class="my-4">Shop Name</h1>
+          - unexpected value "Shop Name"
+
+
+      38 |     //Global -> test -> step 
+      39 |     await page.getByRole("link", {name: "Shop"}).click({timeout:15000});
+    > 40 |     await slowExpect(page.locator(".my-4").first()).toHaveText("Shop");
+         |                                                     ^
+      41 |
+      42 |     //2 more 
+      43 |
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\CoursePlaywright\IIc.spec.js:40:53
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-IIc-Playwright-Test-level-time-out\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-IIc-Playwright-Test-level-time-out\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\CoursePlaywright-IIc-Playwright-Test-level-time-out\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-IIc-Playwright-Test-level-time-out\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\CoursePlaywright-IIc-Playwright-Test-level-time-out\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Test-level-time-out\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Test-level-time-out\video.webm]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Test-level-time-out\error-context.md]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-IIc-Playwright-Test-level-time-out\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="CoursePlaywright\UIBasicstest.spec.js" timestamp="2026-07-22T02:46:00.830Z" hostname="" tests="5" failures="1" skipped="0" time="88.459" errors="0">
+<testcase name="Browser Context Playwright test" classname="CoursePlaywright\UIBasicstest.spec.js" time="34.248">
+<failure message="UIBasicstest.spec.js:4:1 Browser Context Playwright test" type="FAILURE">
+<![CDATA[  CoursePlaywright\UIBasicstest.spec.js:4:1 › Browser Context Playwright test ──────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: locator('[style*=\'block\']')
+    Expected substring: "Incorrect"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toContainText" with timeout 5000ms
+      - waiting for locator('[style*=\'block\']')
+
+
+      22 |     //webdriverwait
+      23 |     console.log(await page.locator("[style*='block']").textContent());
+    > 24 |     await expect(page.locator("[style*='block']")).toContainText('Incorrect');
+         |                                                    ^
+      25 | });
+      26 |
+      27 | test('Page Playwright test', async ({page}) => {
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\CoursePlaywright\UIBasicstest.spec.js:24:52
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[LoginPage Practise | Rahul Shetty Academy
+Incorrect username/password.
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test\error-context.md]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Page Playwright test" classname="CoursePlaywright\UIBasicstest.spec.js" time="9.026">
+<system-out>
+<![CDATA[Google
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test\video.webm]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-Page-Playwright-test\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Browser Context - Validating Error login" classname="CoursePlaywright\UIBasicstest.spec.js" time="15.609">
+<system-out>
+<![CDATA[LoginPage Practise | Rahul Shetty Academy
+Incorrect username/password.
+[]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicst-4e131-xt---Validating-Error-login\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicst-4e131-xt---Validating-Error-login\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="UI Controls" classname="CoursePlaywright\UIBasicstest.spec.js" time="16.337">
+<system-out>
+<![CDATA[[33mtrue[39m
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-UI-Controls\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-UI-Controls\test-finished-2.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-UI-Controls\video.webm]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest-UI-Controls\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="@Child windows handle" classname="CoursePlaywright\UIBasicstest.spec.js" time="13.239">
+<system-out>
+<![CDATA[Please email us at mentor@rahulshettyacademy.com with below template to receive response 
+rahulshettyacademy.com
+rahulshettyacademy.com
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest--Child-windows-handle\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest--Child-windows-handle\test-finished-3.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest--Child-windows-handle\test-finished-2.png]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-UIBasicstest--Child-windows-handle\trace.zip]]
 ]]>
 </system-out>
 </testcase>
