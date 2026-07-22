@@ -1,8 +1,9 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="24.32417">
-<testsuite name="CoursePlaywright\MoreValidations.spec.js" timestamp="2026-07-22T04:59:02.971Z" hostname="" tests="1" failures="0" skipped="0" time="15.61" errors="0">
-<testcase name="Popup validations" classname="CoursePlaywright\MoreValidations.spec.js" time="15.61">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.27327">
+<testsuite name="CoursePlaywright\MoreValidations.spec.js" timestamp="2026-07-22T06:59:45.095Z" hostname="" tests="1" failures="0" skipped="0" time="6.325" errors="0">
+<testcase name="Popup validations" classname="CoursePlaywright\MoreValidations.spec.js" time="6.325">
 <system-out>
-<![CDATA[
+<![CDATA[13,522
+
 [[ATTACHMENT|test-results\CoursePlaywright-MoreValidations-Popup-validations\test-finished-1.png]]
 
 [[ATTACHMENT|test-results\CoursePlaywright-MoreValidations-Popup-validations\video.webm]]
