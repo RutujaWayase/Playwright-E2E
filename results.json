@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 4
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 4
+          "actualWorkers": 1
         },
         "id": "",
         "name": "",
@@ -76,14 +76,14 @@
   },
   "suites": [
     {
-      "title": "CoursePlaywright\\ClientApp.spec.js",
-      "file": "CoursePlaywright/ClientApp.spec.js",
+      "title": "CoursePlaywright\\MoreValidations.spec.js",
+      "file": "CoursePlaywright/MoreValidations.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Browser contxt-validation error login",
-          "ok": false,
+          "title": "Popup validations",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -96,662 +96,34 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 58327,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "[\n  \u001b[32m'ADIDAS ORIGINAL'\u001b[39m,\n  \u001b[32m'ZARA COAT 3'\u001b[39m,\n  \u001b[32m'iphone 13 pro'\u001b[39m,\n  \u001b[32m'qwerty'\u001b[39m,\n  \u001b[32m'car'\u001b[39m,\n  \u001b[32m'iPhone QA Max'\u001b[39m,\n  \u001b[32m'{{productName}}'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m\n]\n"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 15610,
+                  "errors": [],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-22T02:46:05.567Z",
+                  "startTime": "2026-07-22T04:59:05.357Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\test-failed-1.png"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-MoreValidations-Popup-validations\\test-finished-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp-c4aad-ntxt-validation-error-login\\trace.zip"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-MoreValidations-Popup-validations\\video.webm"
                     }
                   ]
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "a86f18d8c6d8eca5fd8c-ca948439b820fb310f13",
-          "file": "CoursePlaywright/ClientApp.spec.js",
+          "id": "29eec9e66ba5bc6c5238-0907b4a26c57cddb8ab2",
+          "file": "CoursePlaywright/MoreValidations.spec.js",
           "line": 3,
-          "column": 1
-        },
-        {
-          "title": "@Gen Client App login",
-          "ok": true,
-          "tags": [
-            "Gen"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 6,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 30065,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "[\n  \u001b[32m'ADIDAS ORIGINAL'\u001b[39m,\n  \u001b[32m'ZARA COAT 3'\u001b[39m,\n  \u001b[32m'iphone 13 pro'\u001b[39m,\n  \u001b[32m'qwerty'\u001b[39m,\n  \u001b[32m'car'\u001b[39m,\n  \u001b[32m'iPhone QA Max'\u001b[39m,\n  \u001b[32m'{{productName}}'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m,\n  \u001b[32m'Laptop'\u001b[39m\n]\n"
-                    },
-                    {
-                      "text": " | 6a602f5585b8849b4901599f | \n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-22T02:47:30.688Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp--Gen-Client-App-login\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp--Gen-Client-App-login\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientApp--Gen-Client-App-login\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a86f18d8c6d8eca5fd8c-945eee32013374e9baac",
-          "file": "CoursePlaywright/ClientApp.spec.js",
-          "line": 58,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "CoursePlaywright\\ClientAppOtherWay.spec.js",
-      "file": "CoursePlaywright/ClientAppOtherWay.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "@Webst Client App login",
-          "ok": false,
-          "tags": [
-            "Webst"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "timedOut",
-                  "duration": 59176,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-22T02:46:05.561Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-ClientAppOtherWay--Webst-Client-App-login\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "ab303c5a3bca3a01f5a4-5eb7963d19911d523a0c",
-          "file": "CoursePlaywright/ClientAppOtherWay.spec.js",
-          "line": 6,
-          "column": 1
-        }
-      ]
-    },
-    {
-      "title": "CoursePlaywright\\IIc.spec.js",
-      "file": "CoursePlaywright/IIc.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Playwright Special locators",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "failed",
-                  "duration": 42523,
-                  "error": {
-                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Check me out if you Love IceCreams!')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\" id=\"exampleCheck1\" class=\"form-check-input\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n",
-                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Check me out if you Love IceCreams!')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\" id=\"exampleCheck1\" class=\"form-check-input\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\IIc.spec.js:5:66",
-                    "location": {
-                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\IIc.spec.js",
-                      "column": 66,
-                      "line": 5
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m'Playwright Special locators'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://rahulshettyacademy.com/angularpractice/\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Check me out if you Love IceCreams!\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Employed\"\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Gender\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(\u001b[32m\"Female\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Password\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"abc123\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\IIc.spec.js",
-                        "column": 66,
-                        "line": 5
-                      },
-                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Check me out if you Love IceCreams!')\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"checkbox\" id=\"exampleCheck1\" class=\"form-check-input\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m'Playwright Special locators'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://rahulshettyacademy.com/angularpractice/\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Check me out if you Love IceCreams!\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Employed\"\u001b[39m)\u001b[33m.\u001b[39mcheck()\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Gender\"\u001b[39m)\u001b[33m.\u001b[39mselectOption(\u001b[32m\"Female\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m\"Password\"\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m\"abc123\"\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\IIc.spec.js:5:66\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-22T02:46:05.596Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-IIc-Playwright-Special-locators\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-IIc-Playwright-Special-locators\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-IIc-Playwright-Special-locators\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-IIc-Playwright-Special-locators\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\IIc.spec.js",
-                    "column": 66,
-                    "line": 5
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "6e37b8d08d04502dee06-a677578807e315d88c85",
-          "file": "CoursePlaywright/IIc.spec.js",
-          "line": 3,
-          "column": 5
-        },
-        {
-          "title": "Playwright Test level time out",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 6000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "parallelIndex": 2,
-                  "status": "timedOut",
-                  "duration": 9443,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 6000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\IIc.spec.js",
-                        "column": 53,
-                        "line": 40
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.my-4').first()\nExpected: \u001b[32m\"Shop\"\u001b[39m\nReceived: \u001b[31m\"Shop\u001b[7m Name\u001b[27m\"\u001b[39m\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 9000ms\u001b[22m\n\u001b[2m  - waiting for locator('.my-4').first()\u001b[22m\n\u001b[2m    5 × locator resolved to <h1 class=\"my-4\">Shop Name</h1>\u001b[22m\n\u001b[2m      - unexpected value \"Shop Name\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 38 |\u001b[39m     \u001b[90m//Global -> test -> step \u001b[39m\n \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"link\"\u001b[39m\u001b[33m,\u001b[39m {name\u001b[33m:\u001b[39m \u001b[32m\"Shop\"\u001b[39m})\u001b[33m.\u001b[39mclick({timeout\u001b[33m:\u001b[39m\u001b[35m15000\u001b[39m})\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m     \u001b[36mawait\u001b[39m slowExpect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\".my-4\"\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveText(\u001b[32m\"Shop\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m\n \u001b[90m 42 |\u001b[39m     \u001b[90m//2 more \u001b[39m\n \u001b[90m 43 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\IIc.spec.js:40:53\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-22T02:47:17.577Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-IIc-Playwright-Test-level-time-out\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-IIc-Playwright-Test-level-time-out\\video.webm"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-IIc-Playwright-Test-level-time-out\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-IIc-Playwright-Test-level-time-out\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "6e37b8d08d04502dee06-9c31fdd907402f3024a9",
-          "file": "CoursePlaywright/IIc.spec.js",
-          "line": 22,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "CoursePlaywright\\UIBasicstest.spec.js",
-      "file": "CoursePlaywright/UIBasicstest.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Browser Context Playwright test",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "timedOut",
-                  "duration": 34248,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\UIBasicstest.spec.js",
-                        "column": 52,
-                        "line": 24
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('[style*=\\'block\\']')\nExpected substring: \u001b[32m\"Incorrect\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[style*=\\'block\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 22 |\u001b[39m     \u001b[90m//webdriverwait\u001b[39m\n \u001b[90m 23 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[style*='block']\"\u001b[39m)\u001b[33m.\u001b[39mtextContent())\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[style*='block']\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Incorrect'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m\n \u001b[90m 27 |\u001b[39m test(\u001b[32m'Page Playwright test'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\UIBasicstest.spec.js:24:52\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "LoginPage Practise | Rahul Shetty Academy\n"
-                    },
-                    {
-                      "text": "Incorrect username/password.\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-22T02:46:05.501Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test\\test-failed-1.png"
-                    },
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicst-adda7-ser-Context-Playwright-test\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "2a0ded5e2a041cc6c151-4b16a680f3a841b2db0f",
-          "file": "CoursePlaywright/UIBasicstest.spec.js",
-          "line": 4,
-          "column": 1
-        },
-        {
-          "title": "Page Playwright test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 9026,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Google\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-22T02:47:17.613Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test\\test-finished-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-Page-Playwright-test\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "2a0ded5e2a041cc6c151-6486d6b1196bac39fa2f",
-          "file": "CoursePlaywright/UIBasicstest.spec.js",
-          "line": 27,
-          "column": 1
-        },
-        {
-          "title": "Browser Context - Validating Error login",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 15609,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "LoginPage Practise | Rahul Shetty Academy\n"
-                    },
-                    {
-                      "text": "Incorrect username/password.\n"
-                    },
-                    {
-                      "text": "[]\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-22T02:47:28.667Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicst-4e131-xt---Validating-Error-login\\test-finished-1.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicst-4e131-xt---Validating-Error-login\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "2a0ded5e2a041cc6c151-0ad109d7406ef087ee9a",
-          "file": "CoursePlaywright/UIBasicstest.spec.js",
-          "line": 36,
-          "column": 1
-        },
-        {
-          "title": "UI Controls",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 16337,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "\u001b[33mtrue\u001b[39m\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-22T02:48:03.231Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-UI-Controls\\test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-UI-Controls\\test-finished-2.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-UI-Controls\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest-UI-Controls\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "2a0ded5e2a041cc6c151-7923e72282fdf0b80117",
-          "file": "CoursePlaywright/UIBasicstest.spec.js",
-          "line": 66,
-          "column": 1
-        },
-        {
-          "title": "@Child windows handle",
-          "ok": true,
-          "tags": [
-            "Child"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 13239,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Please email us at mentor@rahulshettyacademy.com with below template to receive response \n"
-                    },
-                    {
-                      "text": "rahulshettyacademy.com\n"
-                    },
-                    {
-                      "text": "rahulshettyacademy.com\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-22T02:48:21.919Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest--Child-windows-handle\\test-finished-1.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest--Child-windows-handle\\test-finished-3.png"
-                    },
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest--Child-windows-handle\\test-finished-2.png"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-UIBasicstest--Child-windows-handle\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "2a0ded5e2a041cc6c151-dfda4a9c99c0ed4821cd",
-          "file": "CoursePlaywright/UIBasicstest.spec.js",
-          "line": 89,
           "column": 1
         }
       ]
@@ -759,11 +131,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-22T02:46:00.440Z",
-    "duration": 158273.098,
-    "expected": 5,
+    "startTime": "2026-07-22T04:59:02.761Z",
+    "duration": 24324.17,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 5,
+    "unexpected": 0,
     "flaky": 0
   }
 }
