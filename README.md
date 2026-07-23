@@ -551,6 +551,18 @@ npx playwright codegen url
 
 ![alt text](image-21.png)
 
+# API Integration calls for Web tests:
+
+![alt text](image-24.png)
+
+![alt text](image-25.png)
+
+![alt text](image-26.png)
+
+![alt text](image-23.png)
+
+![alt text](image-22.png)
+
 
 
 
