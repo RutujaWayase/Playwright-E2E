@@ -1,5 +1,6 @@
 const {test, expect, request} = require('@playwright/test');
 const loginPayLoad = {userEmail: "anshika@gmail.com", userPassword: "Iamking@000"};
+let token;
 
 test.beforeAll(async() => {
     const apiContext = await request.newContext();
@@ -8,9 +9,10 @@ test.beforeAll(async() => {
             data: loginPayLoad
         }
     ) //200, 201,
-    expect(loginPayLoad.ok()).toBeTruthy();
+    expect(loginResponse.ok()).toBeTruthy();
     const loginResponseJson = loginResponse.json();
-    const token = loginResponseJson.token;
+    token = loginResponseJson.token;
+    console.log(token);
 
 });
 
@@ -21,19 +23,30 @@ test.beforeEach( () =>
 
 //test 1, test2, test3
 
-test('Client App login', async ({page}) => {
+test('Place the order', async ({page}) => {
 
-    const productName = 'ZARA COAT 3';
-    const products = page.locator(".card-body");
-    await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
-    await page.locator("#userEmail").fill("anshika@gmail.com");
-    await page.locator("#userPassword").fill("Iamking@000");
-    //await page.locator("#login").click();
-    await page.locator("[value='Login']").click();
-   // Approach 1: Wait for Network tab =>
-   await page.waitForLoadState('networkidle');
+    await page.addInitScript(value => {
+        window.localStorage.setItem('token', value);
+    }, token);
+
+    // const productName = 'ZARA COAT 3';
+    // const products = page.locator(".card-body");
+
+
+//     await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
+//     await page.locator("#userEmail").fill("anshika@gmail.com");
+//     await page.locator("#userPassword").fill("Iamking@000");
+//     //await page.locator("#login").click();
+//     await page.locator("[value='Login']").click();
+//    // Approach 1: Wait for Network tab =>
+//    await page.waitForLoadState('networkidle');
    //Approach 2: Directly applying wait to an element
-   await page.locator(".card-body b").first().waitFor();
+//   await page.locator(".card-body b").first().waitFor();
+
+    const email = "";
+    const productName = 'ZARA COAT 3';
+    await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
+    const products = page.locator(".card-body");
     const titles = await page.locator(".card-body b").allTextContents();
     console.log(titles);
     const count = await products.count();
@@ -72,7 +85,7 @@ test('Client App login', async ({page}) => {
             break;
         }
     }
-    await page.pause();
+    //await page.pause();
 
 })
 

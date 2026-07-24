@@ -1,12 +1,49 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.27327">
-<testsuite name="CoursePlaywright\MoreValidations.spec.js" timestamp="2026-07-22T06:59:45.095Z" hostname="" tests="1" failures="0" skipped="0" time="6.325" errors="0">
-<testcase name="Popup validations" classname="CoursePlaywright\MoreValidations.spec.js" time="6.325">
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="17.665852">
+<testsuite name="CoursePlaywright\WebAPIPart1.spec.js" timestamp="2026-07-24T02:17:29.618Z" hostname="" tests="1" failures="1" skipped="0" time="13.647" errors="0">
+<testcase name="Place the order" classname="CoursePlaywright\WebAPIPart1.spec.js" time="13.647">
+<failure message="WebAPIPart1.spec.js:26:1 Place the order" type="FAILURE">
+<![CDATA[  CoursePlaywright\WebAPIPart1.spec.js:26:1 › Place the order ──────────────────────────────────────
+
+    TimeoutError: locator.click: Timeout 10000ms exceeded.
+    Call log:
+      - waiting for locator('[routerlink*=\'cart\']')
+
+
+      60 |     }
+      61 |     //await page.pause();
+    > 62 |     await page.locator("[routerlink*='cart']").click();
+         |                                                ^
+      63 |     await page.locator("div li").first().waitFor();
+      64 |     const bool = await page.locator("h3:has-text('Zara Coat 3')").isVisible();
+      65 |     expect(bool).toBeTruthy();
+        at D:\2026 - Study\Playwright\Playwright-E2E\tests\CoursePlaywright\WebAPIPart1.spec.js:62:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-WebAPIPart1-Place-the-order\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-WebAPIPart1-Place-the-order\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\CoursePlaywright-WebAPIPart1-Place-the-order\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\CoursePlaywright-WebAPIPart1-Place-the-order\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
 <system-out>
-<![CDATA[13,522
+<![CDATA[[90mundefined[39m
+[]
 
-[[ATTACHMENT|test-results\CoursePlaywright-MoreValidations-Popup-validations\test-finished-1.png]]
+[[ATTACHMENT|test-results\CoursePlaywright-WebAPIPart1-Place-the-order\test-failed-1.png]]
 
-[[ATTACHMENT|test-results\CoursePlaywright-MoreValidations-Popup-validations\video.webm]]
+[[ATTACHMENT|test-results\CoursePlaywright-WebAPIPart1-Place-the-order\video.webm]]
+
+[[ATTACHMENT|test-results\CoursePlaywright-WebAPIPart1-Place-the-order\trace.zip]]
 ]]>
 </system-out>
 </testcase>

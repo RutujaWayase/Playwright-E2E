@@ -76,14 +76,14 @@
   },
   "suites": [
     {
-      "title": "CoursePlaywright\\MoreValidations.spec.js",
-      "file": "CoursePlaywright/MoreValidations.spec.js",
+      "title": "CoursePlaywright\\WebAPIPart1.spec.js",
+      "file": "CoursePlaywright/WebAPIPart1.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Popup validations",
-          "ok": true,
+          "title": "Place the order",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -96,38 +96,70 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 6325,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 13647,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[routerlink*=\\'cart\\']')\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[routerlink*=\\'cart\\']')\u001b[22m\n\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\WebAPIPart1.spec.js:62:48",
+                    "location": {
+                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\WebAPIPart1.spec.js",
+                      "column": 48,
+                      "line": 62
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 60 |\u001b[39m     }\n \u001b[90m 61 |\u001b[39m     \u001b[90m//await page.pause();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[routerlink*='cart']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"div li\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mwaitFor()\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m bool \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"h3:has-text('Zara Coat 3')\"\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m     expect(bool)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\WebAPIPart1.spec.js",
+                        "column": 48,
+                        "line": 62
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[routerlink*=\\'cart\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 60 |\u001b[39m     }\n \u001b[90m 61 |\u001b[39m     \u001b[90m//await page.pause();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[routerlink*='cart']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"div li\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mwaitFor()\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m bool \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"h3:has-text('Zara Coat 3')\"\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m     expect(bool)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\WebAPIPart1.spec.js:62:48\u001b[22m"
+                    }
+                  ],
                   "stdout": [
                     {
-                      "text": "13,522\n"
+                      "text": "\u001b[90mundefined\u001b[39m\n"
+                    },
+                    {
+                      "text": "[]\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-07-22T06:59:47.915Z",
+                  "startTime": "2026-07-24T02:17:32.036Z",
                   "annotations": [],
                   "attachments": [
                     {
                       "name": "screenshot",
                       "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-MoreValidations-Popup-validations\\test-finished-1.png"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-WebAPIPart1-Place-the-order\\test-failed-1.png"
                     },
                     {
                       "name": "video",
                       "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-MoreValidations-Popup-validations\\video.webm"
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-WebAPIPart1-Place-the-order\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-WebAPIPart1-Place-the-order\\trace.zip"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\WebAPIPart1.spec.js",
+                    "column": 48,
+                    "line": 62
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "29eec9e66ba5bc6c5238-0907b4a26c57cddb8ab2",
-          "file": "CoursePlaywright/MoreValidations.spec.js",
-          "line": 3,
+          "id": "1b08b9b4f5c81a0d0fb4-ed53666609da564e88c5",
+          "file": "CoursePlaywright/WebAPIPart1.spec.js",
+          "line": 26,
           "column": 1
         }
       ]
@@ -135,11 +167,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-22T06:59:44.863Z",
-    "duration": 10273.27,
-    "expected": 1,
+    "startTime": "2026-07-24T02:17:29.454Z",
+    "duration": 17665.852000000003,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
