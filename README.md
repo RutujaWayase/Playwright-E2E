@@ -563,6 +563,17 @@ npx playwright codegen url
 
 ![alt text](image-22.png)
 
+# Javascript Concepts
+
+# Arrays =>
+
+Methods when to use => 
+    1) reduce: iterate & accumulate values for example sum
+         Ex: let total = marks.reduce((sum, totalMarks) => sum + totalMarks, 0)
+    2) filter: when we have to filter for any condition for example even numbers
+         Ex: let newFilterEvenScores = scores.filter(scores => scores%2 == 0)
+    3) map: mapping from one value to new value for example multiply operation
+         Ex: let mappedArray = newFilterEvenScores.map(score => score*3)   
 
 
 
