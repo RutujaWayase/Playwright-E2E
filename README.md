@@ -575,5 +575,5 @@ Methods when to use =>
     3) map: mapping from one value to new value for example multiply operation
          Ex: let mappedArray = newFilterEvenScores.map(score => score*3)   
 
-
+=> : is called fat arrow/pipe
 

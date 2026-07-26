@@ -64,4 +64,21 @@ let totalVal = mappedArray.reduce((sum, val) => sum +val, 0)
 console.log(totalVal)
 var scores1 = [12, 13, 14, 16]
 
-scores1.filter(scores=>scores%2==0)
+let sumValue = scores1.filter(scores=>scores%2==0).map(scores=>scores*3).reduce((sum, val) => sum + val, 0)
+console.log(sumValue)
+
+//sorting an array
+let fruits = ["banana", "mango", "promegrante", "apple"]
+
+fruits.sort()
+console.log(fruits)
+console.log(fruits.sort()) // accending order
+console.log(fruits.reverse()) //descending order
+
+var scores1 = [12, 003, 19, 16, 14]
+console.log(scores1.sort())
+scores1.sort(function(a,b) {
+    return a-b
+})
+
+console.log(scores1.sort((a,b) =>a-b)) //Logic used: Bubble sort
