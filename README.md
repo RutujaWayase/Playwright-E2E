@@ -577,3 +577,11 @@ Methods when to use =>
 
 => : is called fat arrow/pipe
 
+# Playwright:
+
+# Debug API Script:
+
+![alt text](image-27.png)
+
+Do Ctrl+P and click on 'Debug npm Script'
+![alt text](image-28.png)
