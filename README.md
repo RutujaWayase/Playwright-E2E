@@ -585,3 +585,14 @@ Methods when to use =>
 
 Do Ctrl+P and click on 'Debug npm Script'
 ![alt text](image-28.png)
+
+# Trace viewer: 
+
+URL: trace.playwright.dev
+
+Refer: https://playwright.dev/docs/trace-viewer
+
+![alt text](image-29.png)
+
+ 
+
