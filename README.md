@@ -594,5 +594,40 @@ Refer: https://playwright.dev/docs/trace-viewer
 
 ![alt text](image-29.png)
 
- 
+# Network calls
 
+    page.route('**/*.css', route => route.abort());  //block css
+    page.route('**/*.{jpg, png, jpeg}', route => route.abort()); //block images
+
+    page.on('request', request => console.log(request.url())); //url
+    page.on('response', response => console.log(response.url(), response.status())); //response and status code
+
+Method	Purpose
+continue()	Sends request to actual server
+fulfill()	Returns mocked response
+abort()	Cancels request
+
+Intercept GET response =>
+
+await page.route('**/orders', async route => {
+
+    if (route.request().method() === "GET") {
+        await route.fulfill({
+            status: 200,
+            body: JSON.stringify(fakeResponse)
+        });
+    } else {
+        await route.continue();
+    }
+
+});
+
+Validate API response =>
+
+const response = await page.waitForResponse('**/orders');
+
+expect(response.status()).toBe(200);
+
+const body = await response.json();
+
+expect(body.message).toBe("Success");
