@@ -1,144 +1,76 @@
-const {test, expect} = require('@playwright/test');
-const {LoginPage} = require('./pageObjects/LoginPage');
+ const {test, expect} = require('@playwright/test');
+ const {customtest} = require('../utils/test-base');
 
-test.only('Browser contxt-validation error login', async ({page}) => {
+ const {POManager} = require('../pageobjects/POManager');
+ //Json->string->js object
+ const dataset =  JSON.parse(JSON.stringify(require("../utils/placeorderTestData.json")));
 
-    const username = "anshika@gmail.com";
-    const passsword = "Iamking@000";
-    const productName = 'ZARA COAT 3';
-    const products = page.locator(".card-body");
-    const loginPage = new LoginPage(page);
-    loginPage.goTo();
-    loginPage.validLogin(username,passsword);
+ 
+for(const data of dataset)
+{
+ test(`@Webs Client App login for ${data.productName}`, async ({page})=>
+ {
+   const poManager = new POManager(page);
+    //js file- Login js, DashboardPage
+     const products = page.locator(".card-body");
+     const loginPage = poManager.getLoginPage();
+     await loginPage.goTo();
+     await loginPage.validLogin(data.username,data.password);
+     const dashboardPage = poManager.getDashboardPage();
+     await dashboardPage.searchProductAddCart(data.productName);
+     await dashboardPage.navigateToCart();
 
-    //await page.locator("#login").click();
-  //  await page.locator("[value='Login']").click();
-   // Approach 1: Wait for Network tab =>
-   await page.waitForLoadState('networkidle');
-   //Approach 2: Directly applying wait to an element
-   await page.locator(".card-body b").first().waitFor();
-    const titles = await page.locator(".card-body b").allTextContents();
-    console.log(titles);
-    const count = await products.count();
-    for(let i=0; i<count; ++i){
-        if(await products.nth(i).locator("b").textContent() === productName)
-        {
-            //add to cart
-            await products.nth(i).locator("text= Add To Cart").click();
-            break;
-        }
-    }
-    //await page.pause();
-    await page.locator("[routerlink*='cart']").click();
-    await page.locator("div li").first().waitFor();
-    const bool = await page.locator("h3:has-text('Zara Coat 3')").isVisible();
-    expect(bool).toBeTruthy();
-    await page.locator("text=Checkout").click();
+    const cartPage = poManager.getCartPage();
+    await cartPage.VerifyProductIsDisplayed(data.productName);
+    await cartPage.Checkout();
 
-    //await page.locator("[placeholder*='Country']").fill("ind", {delay:100});
+    const ordersReviewPage = poManager.getOrdersReviewPage();
+    await ordersReviewPage.searchCountryAndSelect("ind","India");
+    const orderId = await ordersReviewPage.SubmitAndGetOrderId();
+   console.log(orderId);
+   await dashboardPage.navigateToOrders();
+   const ordersHistoryPage = poManager.getOrdersHistoryPage();
+   await ordersHistoryPage.searchOrderAndSelect(orderId);
+   expect(orderId.includes(await ordersHistoryPage.getOrderId())).toBeTruthy();
 
-    //use pressSequentially() instead of fill()/type()
 
-    await page.locator("[placeholder*='Country']").pressSequentially("ind", {delay:100});
 
-    const dropdown = page.locator(".ta-results");
-    await dropdown.waitFor();
-    const optionsCount = await dropdown.locator("button").count();
-    for(let i=0; i < optionsCount; ++i)
-    {
-        const text = await dropdown.locator("button").nth(i).textContent();
-        if(text === " India")
-            //if(text.trim === "India")
-            //if(text.includes("India")) ==> but other options also includes "India"
-        {
-            await dropdown.locator("button").nth(i).click();
-            break;
-        }
-    }
-    //await page.pause();
 
-})
 
-test('@Gen Client App login', async ({page}) => {
 
-    //js file - Login js, DashboardPage
-    const email = "anshika@gmail.com";
-    const productName = 'ZARA COAT 3';
-    const products = page.locator(".card-body");
-    await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
-    await page.locator("#userEmail").fill(email);
-    await page.locator("#userPassword").fill("Iamking@000");
-    //await page.locator("#login").click();
-    await page.locator("[value='Login']").click();
-   // Approach 1: Wait for Network tab =>
-   await page.waitForLoadState('networkidle');
-   //Approach 2: Directly applying wait to an element
-   await page.locator(".card-body b").first().waitFor();
-    const titles = await page.locator(".card-body b").allTextContents();
-    console.log(titles);
-    const count = await products.count();
-    for(let i=0; i<count; ++i){
-        if(await products.nth(i).locator("b").textContent() === productName)
-        {
-            //add to cart
-            await products.nth(i).locator("text= Add To Cart").click();
-            break;
-        }
-    }
-    //await page.pause();
-    await page.locator("[routerlink*='cart']").click();
-    await page.locator("div li").first().waitFor();
-    const bool = await page.locator("h3:has-text('Zara Coat 3')").isVisible();
-    expect(bool).toBeTruthy();
-    await page.locator("text=Checkout").click();
+    
+ });
+}
 
-    //await page.locator("[placeholder*='Country']").fill("ind", {delay:100});
+ customtest(`Client App login`, async ({page,testDataForOrder})=>
+ {
+   const poManager = new POManager(page);
+    //js file- Login js, DashboardPage
+     const products = page.locator(".card-body");
+     const loginPage = poManager.getLoginPage();
+     await loginPage.goTo();
+     await loginPage.validLogin(testDataForOrder.username,testDataForOrder.password);
+     const dashboardPage = poManager.getDashboardPage();
+     await dashboardPage.searchProductAddCart(testDataForOrder.productName);
+     await dashboardPage.navigateToCart();
 
-    //use pressSequentially() instead of fill()/type()
+    const cartPage = poManager.getCartPage();
+    await cartPage.VerifyProductIsDisplayed(testDataForOrder.productName);
+    await cartPage.Checkout();
 
-    await page.locator("[placeholder*='Country']").pressSequentially("ind", {delay:100});
-
-    const dropdown = page.locator(".ta-results");
-    await dropdown.waitFor();
-    const optionsCount = await dropdown.locator("button").count();
-    for(let i=0; i < optionsCount; ++i)
-    {
-        const text = await dropdown.locator("button").nth(i).textContent();
-        if(text === " India")
-            //if(text.trim === "India")
-            //if(text.includes("India")) ==> but other options also includes "India"
-        {
-            await dropdown.locator("button").nth(i).click();
-            break;
-        }
-    }
-
-    //expect(page.locator(".user__name mt-5 [type='text']").first()).toHaveText(email);
-    expect(page.locator(".user__name [type='text']").first()).toHaveText(email);
-    await page.locator(".action__submit").click();
-    await expect(page.locator(".hero-primary")).toHaveText(" Thankyou for the order. ");
-    const orderID = await page.locator(".em-spacer-1 .ng-star-inserted").textContent();
-    console.log(orderID);
-    await page.locator("button[routerlink*='myorders']").click();
-    await page.locator(".cart").first();
-    const rows = await page.locator("tbody tr");
-
-    for(let i=0; i<await rows.count(); ++i)
-    {
-        const rowOrderId = await rows.nth(i).locator("th").textContent();
-        if(orderID.includes(orderID))
-        {
-            await rows.nth(i).locator("button").first().click();
-            break;
-        }
-    }
-
-    const orderIdDetails = await page.locator(".col-text").textContent();
-    expect(orderID.includes(orderIdDetails)).toBeTruthy();
-  
-    //await page.pause();
 
 })
+//test files will trigger parallel
+//individual tests in the file will run in sequence
+ 
+
+ 
+
+
+
+ 
+
+
 
 
 /*
