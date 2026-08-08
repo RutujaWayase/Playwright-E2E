@@ -648,4 +648,50 @@ npm install exceljs --savedev
 
 ![alt text](image-31.png)
 
- 
+# for mobile screen
+
+use => ...devices['iPhone 11'] in playwright.config.js file
+
+
+ reporter: 'html',
+  projects : [
+    {
+      name : 'safari',
+      use: {
+
+        browserName : 'webkit',
+        headless : true,
+        screenshot : 'off',
+        trace : 'on',//off,on 
+        ...devices['iPhone 11'],    
+      }
+
+    },
+
+![alt text](image-32.png)
+
+# FOr SSL Certificate  
+
+use ignoreHttpsErrors:true,
+permissions:['geolocation']
+
+ {
+      name : 'chrome',
+      use: {
+
+        browserName : 'chromium',
+        headless : false,
+        screenshot : 'on',
+        video: 'retain-on-failure',
+        ignoreHttpsErrors:true,
+        permissions:['geolocation'],
+        
+        trace : 'on',//off,on
+       // ...devices['']
+     //   viewport : {width:720,height:720}
+         }
+
+    }
+
+![alt text](image-33.png)
+
