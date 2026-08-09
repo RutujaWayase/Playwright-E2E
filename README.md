@@ -768,3 +768,9 @@ java -jar jenkins.war -httpPort=9090
 
 ![alt text](image-42.png)
 
+# Cucumber
+
+command to use to install => npm install @cucumber/cucumber
+
+create folder named as 'features' at project level
+
