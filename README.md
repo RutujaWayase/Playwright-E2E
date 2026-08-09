@@ -724,3 +724,12 @@ test.describe.configure({mode:'serial'});
 add @tag ex: @Web. @API, @Smoke in test ex:  test(`@Webs Client App login for ${data.productName}`, async ({page})=>
 
 use command to run tag => npx playwright test --grep @Webs or use npx playwright test --grep "login"
+
+# Allure Reporting
+use command to install => npm i -D @playwright/test allure-playwright
+
+use command to run test => npx playwright test --grep @Web --reporter=line,allure-playwright
+
+allure generate ./allure-results --clean
+
+allure open ./allure-report
