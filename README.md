@@ -695,3 +695,12 @@ permissions:['geolocation']
 
 ![alt text](image-33.png)
 
+# Record video
+
+'off' - Do not record video.
+'on' - Record video for each test.
+'retain-on-failure' - Record video for each test, but remove all videos from successful test runs.
+'on-first-retry' - Record video only when retrying a test for the first time.
+
+Refer: https://playwright.dev/docs/videos 
+
