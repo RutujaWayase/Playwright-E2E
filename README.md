@@ -704,3 +704,23 @@ permissions:['geolocation']
 
 Refer: https://playwright.dev/docs/videos 
 
+# Retries 
+add in playwright.config.js file
+
+Ex:  retries :1, 
+
+# Serial and Parallel mode
+
+test files will trigger parallel
+individual tests in the file will run in sequence
+
+workers: 5 // by default 
+we can spedify workers for example workers:3 in .config file and 3 tabs/workers will run in parallel
+
+test.describe.configure({mode:'parallel'});
+test.describe.configure({mode:'serial'});
+
+# Tags
+add @tag ex: @Web. @API, @Smoke in test ex:  test(`@Webs Client App login for ${data.productName}`, async ({page})=>
+
+use command to run tag => npx playwright test --grep @Webs or use npx playwright test --grep "login"

@@ -2,7 +2,7 @@ const {test, expect} = require('@playwright/test');
 const { request } = require('node:http');
 const { text } = require('node:stream/consumers');
 
-test('Browser Context Playwright test', async ({browser}) => {
+test('@Webs Browser Context Playwright test', async ({browser}) => {
     //chrome - plugins/cookies
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -34,7 +34,7 @@ test('Page Playwright test', async ({page}) => {
 
 
 
-test.only('Browser Context - Validating Error login', async ({browser}) => {
+test('Browser Context - Validating Error login', async ({browser}) => {
     const context = await browser.newContext();
     const page = await context.newPage();
     //page.route('**/*.css', route => route.abort());  //block css
