@@ -733,3 +733,18 @@ use command to run test => npx playwright test --grep @Web --reporter=line,allur
 allure generate ./allure-results --clean
 
 allure open ./allure-report
+
+# Scripts
+
+Under package.json add =>
+
+ "scripts": {
+    "regression": "npx playwright test",
+    "webTests": "npx playwright test --grep @Webs",
+    "APITests": "npx playwright test --grep @API",
+    "SafariNewConfig": "npx playwright test --config playwright.config1.js --project=safari"
+  },
+
+Use command in terminal to run => For Ex: npm run webTests
+
+![alt text](image-34.png)
