@@ -748,3 +748,23 @@ Under package.json add =>
 Use command in terminal to run => For Ex: npm run webTests
 
 ![alt text](image-34.png)
+
+# Jenkins
+
+Use command to start jenkins =>
+java -jar jenkins.war -httpPort=9090
+
+![alt text](image-35.png)
+
+![alt text](image-36.png)
+
+![alt text](image-37.png)
+
+![alt text](image-38.png)
+
+![alt text](image-40.png)
+
+![alt text](image-41.png)
+
+![alt text](image-42.png)
+
