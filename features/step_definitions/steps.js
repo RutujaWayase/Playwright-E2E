@@ -14,7 +14,7 @@ Given('a login to Ecommerce application with {string} and {string}', {timeout: 1
 
   this.poManager = new POManager(page);
     //js file- Login js, DashboardPage
-     const products = page.locator(".card-body");
+     const products = this.page.locator(".card-body");
      const loginPage = this.poManager.getLoginPage();
      await loginPage.goTo();
      await loginPage.validLogin(username,password);
