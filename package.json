@@ -15,7 +15,8 @@
   "devDependencies": {
     "@playwright/test": "^1.62.1",
     "@types/node": "^25.2.3",
-    "allure-playwright": "^3.10.2"
+    "allure-playwright": "^3.10.2",
+    "playwright-bdd": "^9.2.0"
   },
   "directories": {
     "test": "tests"

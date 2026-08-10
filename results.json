@@ -1,7 +1,14 @@
 {
   "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "D:\\2026 - Study\\Playwright\\Playwright-E2E\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "./features/Ecommerce.feature"
+    ],
     "configFile": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\playwright.config.js",
     "rootDir": "D:/2026 - Study/Playwright/Playwright-E2E/tests",
+    "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -10,18 +17,14 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {
-      "actualWorkers": 1
-    },
+    "metadata": {},
     "preserveOutput": "always",
     "projects": [
       {
         "outputDir": "D:/2026 - Study/Playwright/Playwright-E2E/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {
-          "actualWorkers": 1
-        },
+        "metadata": {},
         "id": "",
         "name": "",
         "testDir": "D:/2026 - Study/Playwright/Playwright-E2E/tests",
@@ -65,113 +68,27 @@
       "max": 5,
       "threshold": 300000
     },
-    "runAgents": "none",
     "shard": null,
     "tags": [],
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
-    "version": "1.58.2",
+    "version": "1.62.1",
     "workers": 4,
     "webServer": null
   },
-  "suites": [
+  "suites": [],
+  "errors": [
     {
-      "title": "CoursePlaywright\\WebAPIPart1.spec.js",
-      "file": "CoursePlaywright/WebAPIPart1.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Place the order",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 13647,
-                  "error": {
-                    "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[routerlink*=\\'cart\\']')\u001b[22m\n",
-                    "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[routerlink*=\\'cart\\']')\u001b[22m\n\n    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\WebAPIPart1.spec.js:62:48",
-                    "location": {
-                      "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\WebAPIPart1.spec.js",
-                      "column": 48,
-                      "line": 62
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 60 |\u001b[39m     }\n \u001b[90m 61 |\u001b[39m     \u001b[90m//await page.pause();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[routerlink*='cart']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"div li\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mwaitFor()\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m bool \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"h3:has-text('Zara Coat 3')\"\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m     expect(bool)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\WebAPIPart1.spec.js",
-                        "column": 48,
-                        "line": 62
-                      },
-                      "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[routerlink*=\\'cart\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 60 |\u001b[39m     }\n \u001b[90m 61 |\u001b[39m     \u001b[90m//await page.pause();\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"[routerlink*='cart']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 63 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"div li\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mwaitFor()\u001b[33m;\u001b[39m\n \u001b[90m 64 |\u001b[39m     \u001b[36mconst\u001b[39m bool \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"h3:has-text('Zara Coat 3')\"\u001b[39m)\u001b[33m.\u001b[39misVisible()\u001b[33m;\u001b[39m\n \u001b[90m 65 |\u001b[39m     expect(bool)\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\WebAPIPart1.spec.js:62:48\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "\u001b[90mundefined\u001b[39m\n"
-                    },
-                    {
-                      "text": "[]\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-07-24T02:17:32.036Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-WebAPIPart1-Place-the-order\\test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-WebAPIPart1-Place-the-order\\video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\test-results\\CoursePlaywright-WebAPIPart1-Place-the-order\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "D:\\2026 - Study\\Playwright\\Playwright-E2E\\tests\\CoursePlaywright\\WebAPIPart1.spec.js",
-                    "column": 48,
-                    "line": 62
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "1b08b9b4f5c81a0d0fb4-ed53666609da564e88c5",
-          "file": "CoursePlaywright/WebAPIPart1.spec.js",
-          "line": 26,
-          "column": 1
-        }
-      ]
+      "message": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments.",
+      "stack": "Error: No tests found.\nMake sure that arguments are regular expressions matching test files.\nYou may need to escape symbols like \"$\" or \"*\" and quote the arguments."
     }
   ],
-  "errors": [],
   "stats": {
-    "startTime": "2026-07-24T02:17:29.454Z",
-    "duration": 17665.852000000003,
+    "startTime": "2026-08-10T02:17:11.726Z",
+    "duration": 1083.08,
     "expected": 0,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
