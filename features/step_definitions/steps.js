@@ -1,42 +1,45 @@
 const {When, Then, Given} = require('@cucumber/cucumber')
 const {POManager} = require('../../tests/CoursePlaywright/pageObjects/POManager'); //'../../.. /pageobjects/POManager');
- const {test, expect, playwright} = require('@playwright/test');
+ const {expect} = require('@playwright/test');
+ const playwright = require('@playwright/test');
 
-Given('a login to Ecommerce application with {username} and {password}', async function(username,password) => {
+Given('a login to Ecommerce application with {string} and {string}', {timeout: 100*1000}, async function(username,password) {
   // Step: Given a login to Ecommerce application with "anshika@gmail.com" and "Iamking@000"
   // From: features\Ecommerce.feature:5:1
-  const browser = await playwright.chromium.launch();
+  const browser = await playwright.chromium.launch({
+    headless: false
+  });
   const context = await browser.newContext();
     const page = await context.newPage();
 
-  const poManager = new POManager(page);
+  this.poManager = new POManager(page);
     //js file- Login js, DashboardPage
      const products = page.locator(".card-body");
-     const loginPage = poManager.getLoginPage();
+     const loginPage = this.poManager.getLoginPage();
      await loginPage.goTo();
-     await loginPage.validLogin(data.username,data.password);
+     await loginPage.validLogin(username,password);
 });
 
-When('Add {string} to Cart', async function(string) => {
+When('Add {string} to Cart', async function(productName) {
   // Step: When Add "ZARA COAT 3" to Cart
   // From: features\Ecommerce.feature:6:1
-  const dashboardPage = poManager.getDashboardPage();
-     await dashboardPage.searchProductAddCart(data.productName);
-     await dashboardPage.navigateToCart();
+  this.dashboardPage = this.poManager.getDashboardPage();
+     await this.dashboardPage.searchProductAddCart(productName);
+     await this.dashboardPage.navigateToCart();
 });
 
-Then('Verify {string} is displayed in the Cart', async ({}, arg) => {
+Then('Verify {string} is displayed in the Cart', async (productName) => {
   // Step: Then Verify "ZARA COAT 3" is displayed in the Cart
   // From: features\Ecommerce.feature:7:1
-  const cartPage = poManager.getCartPage();
-    await cartPage.VerifyProductIsDisplayed(data.productName);
+  const cartPage = this.poManager.getCartPage();
+    await cartPage.VerifyProductIsDisplayed(productName);
     await cartPage.Checkout();
 });
 
 When('Enter valid details and Place the Order', async ({}) => {
   // Step: When Enter valid details and Place the Order
   // From: features\Ecommerce.feature:8:1
-  const ordersReviewPage = poManager.getOrdersReviewPage();
+  const ordersReviewPage = this.poManager.getOrdersReviewPage();
     await ordersReviewPage.searchCountryAndSelect("ind","India");
     const orderId = await ordersReviewPage.SubmitAndGetOrderId();
    console.log(orderId);
@@ -45,8 +48,8 @@ When('Enter valid details and Place the Order', async ({}) => {
 Then('Verify order is present in the OrderHistory', async ({}) => {
   // Step: Then Verify order is present in the OrderHistory
   // From: features\Ecommerce.feature:9:1
-  await dashboardPage.navigateToOrders();
-   const ordersHistoryPage = poManager.getOrdersHistoryPage();
+  await this.dashboardPage.navigateToOrders();
+   const ordersHistoryPage = this.poManager.getOrdersHistoryPage();
    await ordersHistoryPage.searchOrderAndSelect(orderId);
    expect(orderId.includes(await ordersHistoryPage.getOrderId())).toBeTruthy();
 
