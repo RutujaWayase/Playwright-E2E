@@ -2,6 +2,8 @@ const playwright = require('@playwright/test');
 const {POManager} = require('../../tests/CoursePlaywright/pageObjects/POManager');
 const {Before, After, BeforeStep, AfterStep, Status} = require('@cucumber/cucumber')
 
+
+/*
 Before(async function () {
     const browser = await playwright.chromium.launch({
         headless:false
@@ -10,6 +12,19 @@ Before(async function () {
     const page = await context.newPage();
     this.poManager = new POManager(page);
     
+});
+*/
+Before(async function () {
+
+    this.browser = await playwright.chromium.launch({
+        headless: false
+    });
+
+    this.context = await this.browser.newContext();
+
+    this.page = await this.context.newPage();
+
+    this.poManager = new POManager(this.page);
 });
 
 BeforeStep(function () {

@@ -2,9 +2,9 @@
 import { defineConfig, devices, firefox } from '@playwright/test';
 import { defineBddConfig } from 'playwright-bdd';
 
-const testDir = defineBddConfig({
-  paths:  ['./features/Ecommerce.feature'],
-});
+// const testDir = defineBddConfig({
+//   paths:  ['./features/Ecommerce.feature'],
+// });
 
 /**
  * Read environment variables from file.

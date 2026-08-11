@@ -774,3 +774,21 @@ command to use to install => npm install @cucumber/cucumber
 
 create folder named as 'features' at project level
 
+# Hooks
+
+Befoe, After, Before Step, After Step, Status
+
+# Tags
+@Regression
+@Validation 
+
+command to run those feature file => npx cucumber-js --tags "Regression" --exit
+
+# Parameterization, parallel, html, rerun failed tests
+
+# Parameterization => Scenario outline
+
+# Parallel => running multiple scenarios in same feature file
+
+npx cucumber-js features/Ecommerce.feature --parallel 2 --exit
+

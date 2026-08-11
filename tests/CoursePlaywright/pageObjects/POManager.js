@@ -1,7 +1,7 @@
 const {LoginPage} = require('./LoginPage');
 const {DashboardPage} = require('./DashboardPage');
-const {OrdersHistoryPage} = require('./OrdersHistoryPage');
-const {OrdersReviewPage} = require('./OrdersReviewPage');
+const {OrdersHistoryPage} = require('./OrderHistoryPage');
+const {OrdersReviewPage} = require('./OrderReviewPage');
 const {CartPage} = require('./CartPage');
 class POManager
 {
