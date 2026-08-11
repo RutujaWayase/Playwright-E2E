@@ -792,3 +792,19 @@ command to run those feature file => npx cucumber-js --tags "Regression" --exit
 
 npx cucumber-js features/Ecommerce.feature --parallel 2 --exit
 
+# HTML Reports
+
+npx cucumber-js ./features/Ecommerce.feature --parallel 2 --exit --format html:cucumber-report.html
+
+cucumber-report.html => file will be generated. Then copy file path and paste it in any browser to view html report.
+
+![alt text](image-43.png)
+
+# Retries
+
+npx cucumber-js --tags "@Regression" --retry 1 --exit --format html:cucumber-report.html
+
+add in package.json file under Snippet =>
+"CucumberRegression": "npx cucumber-js --tags '@Regression' --retry 1 --exit --format html:cucumber-report.html"
+
+and then run command => npm run CucumberRegression
