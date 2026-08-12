@@ -808,3 +808,93 @@ add in package.json file under Snippet =>
 "CucumberRegression": "npx cucumber-js --tags '@Regression' --retry 1 --exit --format html:cucumber-report.html"
 
 and then run command => npm run CucumberRegression
+
+# JS
+
+# Array
+
+Adding and Removing Elements =>
+
+| Method      | Description                      | Example            |
+| ----------- | -------------------------------- | ------------------ |
+| `push()`    | Add to end                       | `arr.push(4)`      |
+| `pop()`     | Remove from end                  | `arr.pop()`        |
+| `unshift()` | Add to beginning                 | `arr.unshift(0)`   |
+| `shift()`   | Remove from beginning            | `arr.shift()`      |
+| `splice()`  | Add, remove, or replace elements | `arr.splice(1, 2)` |
+
+Searching =>
+
+| Method          | Description                           |
+| --------------- | ------------------------------------- |
+| `includes()`    | Checks if value exists                |
+| `indexOf()`     | First index of value                  |
+| `lastIndexOf()` | Last index of value                   |
+| `find()`        | Returns first matching element        |
+| `findIndex()`   | Returns index of first match          |
+| `some()`        | Returns `true` if any element matches |
+| `every()`       | Returns `true` if all elements match  |
+
+Transforming Arrays =>
+
+| Method      | Description                                |
+| ----------- | ------------------------------------------ |
+| `map()`     | Creates new array by transforming elements |
+| `filter()`  | Creates new array with matching elements   |
+| `reduce()`  | Reduces array to a single value            |
+| `flat()`    | Flattens nested arrays                     |
+| `flatMap()` | Maps and flattens                          |
+
+Iteration =>
+
+| Method      | Description                        |
+| ----------- | ---------------------------------- |
+| `forEach()` | Executes function for each element |
+| `entries()` | Returns index-value pairs          |
+| `keys()`    | Returns indexes                    |
+| `values()`  | Returns values                     |
+
+Sorting and Reversing =>
+
+| Method         | Description                             |
+| -------------- | --------------------------------------- |
+| `sort()`       | Sorts array (mutates original)          |
+| `reverse()`    | Reverses array (mutates original)       |
+| `toSorted()`   | Returns sorted copy (does not mutate)   |
+| `toReversed()` | Returns reversed copy (does not mutate) |
+
+Combining and Slicing =>
+
+| Method        | Description                        |
+| ------------- | ---------------------------------- |
+| `concat()`    | Combines arrays                    |
+| `slice()`     | Returns part of array              |
+| `join()`      | Converts array to string           |
+| `toSpliced()` | Non-mutating version of `splice()` |
+
+Filling and Copying =>
+
+| Method         | Description                        |
+| -------------- | ---------------------------------- |
+| `fill()`       | Fills array with value             |
+| `copyWithin()` | Copies part of array within itself |
+
+Creating Arrays =>
+
+Array.of(1, 2, 3);
+// [1,2,3]
+
+Array.from("hello");
+// ["h","e","l","l","o"]
+
+Array.from({ length: 5 }, (_, i) => i);
+// [0,1,2,3,4]
+
+Useful New Methods (ES2023+) =>
+
+| Method         | Description                              |
+| -------------- | ---------------------------------------- |
+| `toSorted()`   | Returns sorted copy                      |
+| `toReversed()` | Returns reversed copy                    |
+| `toSpliced()`  | Non-mutating `splice()`                  |
+| `with()`       | Returns a copy with one element replaced |
