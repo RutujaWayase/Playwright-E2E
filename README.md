@@ -899,3 +899,8 @@ Useful New Methods (ES2023+) =>
 | `toReversed()` | Returns reversed copy                    |
 | `toSpliced()`  | Non-mutating `splice()`                  |
 | `with()`       | Returns a copy with one element replaced |
+
+
+# Callback function in Javascript
+A callback function is passed as an argument to another function and is executed after some operstion has been completed. Callbacks are often used for asynchronous operations.
+
