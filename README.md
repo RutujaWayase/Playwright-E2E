@@ -904,3 +904,11 @@ Useful New Methods (ES2023+) =>
 # Callback function in Javascript
 A callback function is passed as an argument to another function and is executed after some operstion has been completed. Callbacks are often used for asynchronous operations.
 
+# Inheritance, super, this keyword
+
+# Difference between == and === operator
+console.log(5=='5') //true
+
+console.log(5==='5') //false it is hard compare  and its a String type operator
+
+== and === both are used in testing script as per requirement.
