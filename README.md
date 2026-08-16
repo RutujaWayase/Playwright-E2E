@@ -912,3 +912,14 @@ console.log(5=='5') //true
 console.log(5==='5') //false it is hard compare  and its a String type operator
 
 == and === both are used in testing script as per requirement.
+
+# Null and Undefined operator
+let a = null;
+console.log(a); //null
+
+console.log(typeof a); //object
+
+let b;
+console.log(b); //undefined
+console.log(typeof b); //undefined
+
