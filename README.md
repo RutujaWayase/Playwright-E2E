@@ -923,3 +923,11 @@ let b;
 console.log(b); //undefined
 console.log(typeof b); //undefined
 
+# Array methods (filter, map, reduce) and Javascript objects
+
+![alt text](image-44.png)
+
+Create an array of objects representing students with their names and scores, and get the below result with optimized solution.
+1) Filters out students who passed in the exam with score more than 36.
+2) Update Pased students name with uppercase.
+3) Total score of all passing students
