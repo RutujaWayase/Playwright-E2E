@@ -59,3 +59,13 @@ try{
 if(!username){
     throw new Error("Username is required");
 }
+
+//Explicit waits
+await page.locator('#username').waitFor({state: 'visible'});
+await page.waitForURL('**/dashboard');
+
+//explicit wait => network response:
+await page.waitForResponse(response =>
+    response.url().incldes('/api/login') &&
+    response.status() === 200
+);
