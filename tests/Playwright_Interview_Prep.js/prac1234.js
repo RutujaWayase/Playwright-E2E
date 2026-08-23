@@ -69,3 +69,7 @@ await page.waitForResponse(response =>
     response.url().incldes('/api/login') &&
     response.status() === 200
 );
+
+//wait for load state
+await page.waitForLoadState('load');
+await page.waitForLoadState('documentloaded'); 
