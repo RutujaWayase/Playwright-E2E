@@ -931,3 +931,6 @@ Create an array of objects representing students with their names and scores, an
 1) Filters out students who passed in the exam with score more than 36.
 2) Update Pased students name with uppercase.
 3) Total score of all passing students
+
+
+   
