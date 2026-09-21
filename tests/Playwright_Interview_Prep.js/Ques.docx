@@ -1,0 +1,60 @@
+* What is Playwright and why did you choose it over Selenium?
+
+Answer:
+
+Playwright is an open-source end-to-end automation framework developed by Microsoft. It supports Chromium, Firefox, and WebKit and provides APIs for web UI, API, network, browser contexts, authentication, screenshots, videos, and tracing.
+
+I prefer Playwright over Selenium mainly because it has built-in auto-waiting, modern locators, browser-context isolation, easy parallel execution, network interception, tracing, and strong support for modern web applications.
+
+Selenium is still widely used and has a mature ecosystem, but with Playwright I can write more reliable tests with less synchronization code. Features like BrowserContext, storageState(), trace viewer, and built-in fixtures also make framework development easier.
+
+Key points to mention:
+
+Auto-waiting
+Reliable locators
+Chromium, Firefox, WebKit
+BrowserContext isolation
+Parallel execution
+API testing
+Trace Viewer
+Network interception
+Authentication reuse
+
+
+
+* Explain Browser, BrowserContext, and Page.
+Browser
+
+Represents the actual browser instance.
+
+const browser = await chromium.launch();
+BrowserContext
+
+An isolated browser session, similar to an incognito profile.
+
+const context = await browser.newContext();
+
+It has its own:
+
+Cookies
+Local storage
+Session storage
+Authentication state
+Page
+
+Represents a browser tab.
+
+const page = await context.newPage();
+Interview answer:
+
+Browser is the browser process, BrowserContext is an isolated session inside the browser, and Page represents an individual tab. Multiple contexts can exist inside one browser, and multiple pages can exist inside one context.
+
+Example:
+
+Browser
+ ├── Context 1
+ │    ├── Page 1
+ │    └── Page 2
+ │
+ └── Context 2
+      └── Page 1
