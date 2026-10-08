@@ -1,0 +1,1108 @@
+Rutuja, here are Playwright interview questions with answers for an SDET role (5+ years of experience). The answers are written in a way you can speak confidently during a technical interview, with JavaScript code examples and practical project scenarios.
+
+# 1. Playwright — High Priority Interview Questions and Answers
+
+## 1. What is Playwright and why did you choose it over Selenium?
+
+Answer:
+
+Playwright is an open-source end-to-end test automation framework developed by Microsoft. It supports automation of web applications across Chromium, Firefox, and WebKit browsers.
+
+I prefer Playwright over Selenium for several reasons:
+
+- Auto-waiting: Playwright automatically waits for elements to become actionable before performing operations.
+- Cross-browser testing: It supports Chromium, Firefox, and WebKit.
+- Multiple browser contexts: It allows isolated sessions without launching multiple browser instances.
+- Built-in features: It provides screenshots, video recording, trace viewer, and network interception.
+- Faster execution: Its architecture and parallel execution capabilities can improve test execution speed.
+- Easy debugging: Trace Viewer and detailed error messages help identify test failures.
+
+Real-time example: In my project, I can use Playwright with JavaScript and the Page Object Model to automate login, user workflows, and regression scenarios while reducing manual testing effort.
+
+## 2. Explain Browser, BrowserContext, and Page.
+
+Answer:
+
+These are three important concepts in Playwright.
+
+| Concept        | Explanation                                                                        |
+| -------------- | ---------------------------------------------------------------------------------- |
+| Browser        | The actual browser instance, such as Chromium, Firefox, or WebKit.                 |
+| BrowserContext | An isolated browser session with its own cookies, local storage, and session data. |
+| Page           | A single browser tab or window inside a browser context.                           |
+
+Example:
+
+```
+const { chromium } = require('playwright');
+
+(async () => {
+    const browser = await chromium.launch();
+
+    const context = await browser.newContext();
+
+    const page = await context.newPage();
+
+    await page.goto('https://example.com');
+
+    await browser.close();
+})();
+```
+
+Interview explanation:
+
+A single browser can have multiple browser contexts, and each context can contain multiple pages. Browser contexts are useful for testing multiple users independently without sharing authentication or session data.
+
+## 3. What is the difference between `locator()` and `getByRole()`?
+
+Answer:
+
+Both methods are used to locate elements, but they differ in how they identify them.
+
+| `locator()`                                                      | `getByRole()`                                                                      |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Locates elements using CSS, XPath, or other supported selectors. | Locates elements using their accessible role and optionally their accessible name. |
+| Useful for complex or custom DOM structures.                     | Preferred for user-facing elements with accessible semantics.                      |
+| Can target elements using attributes and CSS selectors.          | Encourages accessibility-focused testing.                                          |
+
+Example using `locator()`:
+
+```
+await page.locator('#username').fill('admin');
+await page.locator('.login-button').click();
+```
+
+Example using `getByRole()`:
+
+```
+await page.getByRole('textbox', {
+    name: 'Username'
+}).fill('admin');
+
+await page.getByRole('button', {
+    name: 'Login'
+}).click();
+```
+
+Interview explanation:
+
+I prefer `getByRole()` for buttons, links, and form fields because it closely represents how users interact with the application. I use `locator()` when I need CSS selectors or when accessible locators are not suitable.
+
+## 4. How do you handle dynamic elements in Playwright?
+
+Answer:
+
+Dynamic elements are elements whose attributes, text, or availability change at runtime.
+
+I handle them using:
+
+- Role-based locators and text locators.
+- CSS selectors with stable attributes.
+- Locator filtering.
+- Auto-waiting and explicit condition-based waits.
+- Assertions to verify element visibility or state.
+
+Example:
+
+```
+// Wait for a dynamic button to become visible
+const submitButton = page.getByRole('button', {
+    name: 'Submit'
+});
+
+await expect(submitButton).toBeVisible();
+await expect(submitButton).toBeEnabled();
+await submitButton.click();
+```
+
+Handling dynamically loaded rows:
+
+```
+const row = page.locator('tr').filter({
+    hasText: 'Rutuja'
+});
+
+await expect(row).toBeVisible();
+await row.getByRole('button', {
+    name: 'Edit'
+}).click();
+```
+
+Interview explanation:
+
+I avoid hardcoded waits for dynamic elements. Instead, I use stable locators and Playwright's auto-waiting or web-first assertions to make the tests more reliable.
+
+## 5. What are auto-waits in Playwright?
+
+Answer:
+
+Auto-waiting is a built-in Playwright feature that waits for elements to meet the necessary conditions before performing actions.
+
+For example, before clicking a button, Playwright checks whether it is:
+
+- Visible.
+- Stable.
+- Enabled.
+- Able to receive pointer events.
+
+Example:
+
+```
+await page.getByRole('button', {
+    name: 'Submit'
+}).click();
+```
+
+Playwright automatically waits for the button to become actionable within the configured timeout.
+
+Interview explanation:
+
+Auto-waiting reduces synchronization issues and eliminates many unnecessary manual waits. However, it does not automatically wait for every business operation to finish. I use assertions such as `toHaveText()` or `toBeVisible()` to verify application outcomes.
+
+## 6. What is the difference between `waitForTimeout()` and explicit/auto waiting?
+
+Answer:
+
+| `waitForTimeout()`                                            | Explicit/condition-based waiting                     | Auto-waiting                                      |
+| ------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------- |
+| Waits for a fixed duration.                                   | Waits for a specific condition.                      | Automatically waits for actionability conditions. |
+| Can make tests slower.                                        | More reliable for application state changes.         | Built into Playwright actions.                    |
+| Can still fail if the application takes longer than expected. | Waits until the condition is satisfied or times out. | Waits before performing actions.                  |
+
+Example of fixed waiting:
+
+```
+await page.waitForTimeout(5000);
+```
+
+Example of condition-based waiting:
+
+```
+await page.locator('.success-message').waitFor({
+    state: 'visible'
+});
+```
+
+Example of auto-waiting:
+
+```
+await page.getByRole('button', {
+    name: 'Save'
+}).click();
+```
+
+Interview explanation:
+
+I avoid `waitForTimeout()` in regular automation because it introduces unnecessary delays and can cause flaky tests. I prefer auto-waiting, web-first assertions, or explicit waits for a specific condition.
+
+## 7. How do you handle multiple tabs/windows?
+
+Answer:
+
+In Playwright, I use the `context.waitForEvent('page')` method to handle a new tab or window opened by an action.
+
+Example:
+
+```
+const [newPage] = await Promise.all([
+    context.waitForEvent('page'),
+    page.getByRole('link', {
+        name: 'Open New Tab'
+    }).click()
+]);
+
+await newPage.waitForLoadState();
+console.log(await newPage.title());
+```
+
+Interview explanation:
+
+I listen for the new page event before clicking the link to avoid missing the event. Once the new tab is opened, I can interact with it independently.
+
+Follow-up: What if a new tab opens from a popup?
+
+For a popup opened by a specific page, I use `page.waitForEvent('popup')` instead of the browser context's page event.
+
+```
+const [popup] = await Promise.all([
+    page.waitForEvent('popup'),
+    page.getByRole('button', {
+        name: 'Open Popup'
+    }).click()
+]);
+
+await popup.waitForLoadState();
+```
+
+## 8. How do you handle iframes?
+
+Answer:
+
+An iframe is an HTML document embedded inside another HTML page. Playwright provides `frameLocator()` to locate and interact with elements inside an iframe.
+
+Example:
+
+```
+const frame = page.frameLocator('#payment-frame');
+
+await frame.locator('#card-number')
+    .fill('1234567812345678');
+
+await frame.locator('#expiry')
+    .fill('12/28');
+
+await frame.getByRole('button', {
+    name: 'Pay'
+}).click();
+```
+
+Interview explanation:
+
+I use `frameLocator()` when I need to interact with elements inside an iframe. It supports chaining locators and automatically handles waiting for the frame and its elements.
+
+Follow-up: What is the difference between `frameLocator()` and `frame()`?
+
+- `frameLocator()` is useful for locating and interacting with elements inside a frame through chained locators.
+- `frame()` retrieves a `Frame` object by name or URL, which is useful when I need to work directly with the frame object.
+
+## 9. How do you handle browser dialogs?
+
+Answer:
+
+Playwright supports browser dialogs such as alerts, confirms, and prompts. I use the `dialog` event to handle them.
+
+Example: Accept an alert
+
+```
+page.on('dialog', async dialog => {
+    console.log(dialog.message());
+    await dialog.accept();
+});
+
+await page.getByRole('button', {
+    name: 'Show Alert'
+}).click();
+```
+
+Example: Dismiss a confirmation dialog
+
+```
+page.on('dialog', async dialog => {
+    await dialog.dismiss();
+});
+
+await page.getByRole('button', {
+    name: 'Delete'
+}).click();
+```
+
+Interview explanation:
+
+I register the dialog event listener before triggering the action that opens the dialog. Depending on the scenario, I can accept, dismiss, or provide text to a prompt dialog.
+
+## 10. How do you upload and download files?
+
+Answer:
+
+Playwright provides `setInputFiles()` for uploading files and `waitForEvent('download')` for handling downloads.
+
+File upload example:
+
+```
+await page.locator('input[type="file"]')
+    .setInputFiles('./test-data/resume.pdf');
+```
+
+File download example:
+
+```
+const [download] = await Promise.all([
+    page.waitForEvent('download'),
+    page.getByRole('button', {
+        name: 'Download Report'
+    }).click()
+]);
+
+await download.saveAs('./downloads/report.pdf');
+
+console.log(download.suggestedFilename());
+```
+
+Interview explanation:
+
+For uploads, I use `setInputFiles()` to provide the required file directly. For downloads, I wait for the download event before clicking the download button and then save the file to the required location.
+
+Follow-up: How do you upload a file when there is no file input element?
+
+I use `page.waitForEvent('filechooser')` to handle a custom upload button.
+
+```
+const [fileChooser] = await Promise.all([
+    page.waitForEvent('filechooser'),
+    page.getByRole('button', {
+        name: 'Upload'
+    }).click()
+]);
+
+await fileChooser.setFiles('./test-data/sample.pdf');
+```
+
+## 11. How do you take screenshots, videos, and traces?
+
+Answer:
+
+Playwright provides built-in debugging and reporting capabilities, including screenshots, videos, and trace recording.
+
+Screenshot example:
+
+```
+await page.screenshot({
+    path: 'screenshots/homepage.png',
+    fullPage: true
+});
+```
+
+Video recording:
+
+Video recording is configured when creating the browser context.
+
+```
+const context = await browser.newContext({
+    recordVideo: {
+        dir: 'videos/'
+    }
+});
+
+const page = await context.newPage();
+
+await page.goto('https://example.com');
+
+await context.close();
+```
+
+Trace recording:
+
+```
+await context.tracing.start({
+    screenshots: true,
+    snapshots: true,
+    sources: true
+});
+
+// Execute test steps here
+
+await context.tracing.stop({
+    path: 'traces/trace.zip'
+});
+```
+
+Interview explanation:
+
+- Screenshots help capture the application's state at a particular point.
+- Videos help review the entire test execution.
+- Traces provide detailed information about actions, network activity, DOM snapshots, and screenshots.
+
+In a real project, I prefer configuring screenshots, videos, and traces through Playwright Test configuration, particularly for failed tests, rather than manually recording every test.
+
+Example configuration:
+
+```
+// playwright.config.js
+module.exports = {
+    use: {
+        screenshot: 'only-on-failure',
+        video: 'retain-on-failure',
+        trace: 'retain-on-failure'
+    }
+};
+```
+
+## 12. What is `storageState()`? How do you reuse authentication?
+
+Answer:
+
+`storageState()` is a Playwright feature that saves and restores browser authentication state, including cookies and local storage.
+
+It helps avoid logging in before every test when tests can safely share the same authenticated state.
+
+Step 1: Save authentication state
+
+```
+const { chromium } = require('playwright');
+
+(async () => {
+    const browser = await chromium.launch();
+    const page = await browser.newPage();
+
+    await page.goto('https://example.com/login');
+
+    await page.locator('#username').fill('admin');
+    await page.locator('#password').fill('password');
+    await page.getByRole('button', {
+        name: 'Login'
+    }).click();
+
+    await page.context().storageState({
+        path: 'auth.json'
+    });
+
+    await browser.close();
+})();
+```
+
+Step 2: Reuse authentication state
+
+```
+const context = await browser.newContext({
+    storageState: 'auth.json'
+});
+
+const page = await context.newPage();
+
+await page.goto('https://example.com/dashboard');
+```
+
+Interview explanation:
+
+I use `storageState()` to reduce repetitive login steps and improve test execution time. In CI/CD pipelines, I make sure authentication files are generated securely and are not committed to source control.
+
+Important: Storage state does not automatically save every kind of browser state. For example, session storage requires additional handling.
+
+## 13. Explain Playwright fixtures.
+
+Answer:
+
+Fixtures are reusable components that provide the resources and setup required by tests. They help manage browser instances, pages, test data, and common test setup and teardown operations.
+
+Playwright Test has built-in fixtures such as:
+
+- `page`
+- `browser`
+- `context`
+- `request`
+
+Example using a built-in fixture:
+
+```
+const { test, expect } = require('@playwright/test');
+
+test('Verify homepage title', async ({ page }) => {
+    await page.goto('https://example.com');
+
+    await expect(page).toHaveTitle(/Example/);
+});
+```
+
+Example of a custom fixture:
+
+```
+const { test: base, expect } = require('@playwright/test');
+
+const test = base.extend({
+    loginPage: async ({ page }, use) => {
+        await page.goto('https://example.com/login');
+
+        await use(page);
+    }
+});
+
+test('Verify login page', async ({ loginPage }) => {
+    await expect(loginPage).toHaveURL(/login/);
+});
+
+module.exports = { test, expect };
+```
+
+Interview explanation:
+
+I use fixtures to avoid code duplication and maintain reusable setup and teardown logic. For example, I can create fixtures for authenticated users, API clients, or frequently used test data.
+
+Follow-up: What is the difference between test-scoped and worker-scoped fixtures?
+
+- Test-scoped: Created separately for each test and cleaned up after that test.
+- Worker-scoped: Shared by tests running within the same worker process and cleaned up when the worker finishes.
+
+Worker-scoped fixtures are useful for expensive setup operations that can safely be shared within a worker.
+
+## 14. How do you implement parallel execution?
+
+Answer:
+
+Playwright Test supports parallel execution, allowing multiple tests to run simultaneously and reducing total execution time.
+
+I can configure parallel execution using `fullyParallel`, `workers`, or `test.describe.configure()`.
+
+Example configuration:
+
+```
+// playwright.config.js
+module.exports = {
+    fullyParallel: true,
+    workers: 4,
+    retries: 1,
+    use: {
+        headless: true
+    }
+};
+```
+
+Run tests using multiple workers:
+
+```
+npx playwright test --workers=4
+```
+
+Run tests in parallel within a describe block:
+
+```
+const { test, expect } = require('@playwright/test');
+
+test.describe('Login tests', () => {
+    test.describe.configure({
+        mode: 'parallel'
+    });
+
+    test('Valid login', async ({ page }) => {
+        await page.goto('https://example.com/login');
+        await expect(page).toHaveTitle(/Login/);
+    });
+
+    test('Invalid login', async ({ page }) => {
+        await page.goto('https://example.com/login');
+        await expect(page.getByRole('button', {
+            name: 'Login'
+        })).toBeVisible();
+    });
+});
+```
+
+Interview explanation:
+
+I use parallel execution to reduce regression testing time. However, I make sure tests are independent and do not depend on shared mutable test data or execution order.
+
+For example, if multiple tests update the same user account, I use separate test accounts or appropriate data isolation to avoid conflicts.
+
+## 15. How do you handle test data?
+
+Answer:
+
+I manage test data based on the requirements of the test scenarios, data dependencies, and execution environment.
+
+Some common approaches are:
+
+- JSON files: Store reusable test data outside the test scripts.
+- Environment variables: Store configuration and environment-specific values.
+- API calls: Create or prepare test data using API requests.
+- Database setup: Insert or retrieve test data when database access is permitted.
+- Dynamic data generation: Generate unique usernames, email addresses, or IDs to avoid conflicts.
+- Setup and teardown: Create test data before execution and clean it up afterward.
+
+Example using JSON test data:
+
+`test-data.json`
+
+```
+{
+    "validUser": {
+        "username": "testuser",
+        "password": "Test@123"
+    },
+    "invalidUser": {
+        "username": "wronguser",
+        "password": "wrongpass"
+    }
+}
+```
+
+Using test data in JavaScript:
+
+```
+const { test, expect } = require('@playwright/test');
+const testData = require('./test-data.json');
+
+test('Login with valid credentials', async ({ page }) => {
+    await page.goto('https://example.com/login');
+
+    await page.locator('#username')
+        .fill(testData.validUser.username);
+
+    await page.locator('#password')
+        .fill(testData.validUser.password);
+
+    await page.getByRole('button', {
+        name: 'Login'
+    }).click();
+
+    await expect(page).toHaveURL(/dashboard/);
+});
+```
+
+Interview explanation:
+
+In my automation framework, I prefer separating test data from test logic. For scenarios involving multiple users or environments, I use external data files, API-based setup, or environment variables. I also make sure sensitive information is not hardcoded in the test scripts.
+
+## 16. How do you run tests across Chromium, Firefox, and WebKit?
+
+Answer:
+
+Playwright supports cross-browser testing through projects in the Playwright configuration file.
+
+Example configuration:
+
+```
+// playwright.config.js
+const { defineConfig, devices } = require('@playwright/test');
+
+module.exports = defineConfig({
+    projects: [
+        {
+            name: 'chromium',
+            use: {
+                ...devices['Desktop Chrome']
+            }
+        },
+        {
+            name: 'firefox',
+            use: {
+                ...devices['Desktop Firefox']
+            }
+        },
+        {
+            name: 'webkit',
+            use: {
+                ...devices['Desktop Safari']
+            }
+        }
+    ]
+});
+```
+
+Run tests across all browsers:
+
+```
+npx playwright test
+```
+
+Run tests in a specific browser:
+
+```
+npx playwright test --project=chromium
+```
+
+Interview explanation:
+
+I use Playwright projects to execute the same test suite across multiple browser engines. This helps identify browser-specific issues and ensures consistent application behavior.
+
+For example, I can test a login workflow in Chromium, Firefox, and WebKit to verify that the authentication flow works consistently across browsers.
+
+## 17. How do you handle flaky Playwright tests?
+
+Answer:
+
+A flaky test is a test that sometimes passes and sometimes fails without any relevant change in the application or test logic.
+
+I follow these approaches to reduce flaky tests:
+
+1. Use auto-waiting: Avoid unnecessary hardcoded waits.
+2. Use stable locators: Prefer role-based locators and reliable test IDs.
+3. Avoid test dependencies: Make sure tests can run independently.
+4. Use proper assertions: Verify expected application behavior rather than assuming an action succeeded.
+5. Control test data: Avoid shared data conflicts during parallel execution.
+6. Analyze traces: Use Playwright Trace Viewer to investigate failures.
+7. Handle network dependencies: Mock external services when appropriate or wait for meaningful application responses.
+8. Use retries carefully: Configure retries to help diagnose intermittent failures without hiding underlying problems.
+
+Example of a retry configuration:
+
+```
+// playwright.config.js
+module.exports = {
+    retries: 2,
+    use: {
+        trace: 'on-first-retry',
+        screenshot: 'only-on-failure',
+        video: 'retain-on-failure'
+    }
+};
+```
+
+Example of a reliable assertion:
+
+```
+await page.getByRole('button', {
+    name: 'Submit'
+}).click();
+
+await expect(
+    page.getByText('Form submitted successfully')
+).toBeVisible();
+```
+
+Interview explanation:
+
+When I encounter a flaky test, I first investigate the root cause rather than simply increasing the timeout or retry count. I analyze execution traces, screenshots, network requests, and test data dependencies. Once I identify the cause, I fix the synchronization, locator, or test isolation issue.
+
+Follow-up: What is the difference between a flaky test and an application bug?
+
+- A flaky test produces inconsistent results under apparently equivalent conditions.
+- An application bug is a defect in application behavior that can be reproduced under specific conditions.
+
+However, a flaky test can also expose an intermittent application bug, so I investigate both possibilities before deciding.
+
+## 18. How do you design a scalable Playwright framework?
+
+Answer:
+
+I design a scalable Playwright framework using modular components, reusable functions, clear test organization, and centralized configuration.
+
+My framework generally includes:
+
+- Test specifications: Contain test scenarios and assertions.
+- Page Object Model: Keeps page locators and page-specific actions separate from test logic.
+- Fixtures: Handle reusable setup and teardown operations.
+- Test data: Stores external data in JSON files or other appropriate sources.
+- Utilities: Provide common reusable functions.
+- Configuration: Manages browsers, environments, timeouts, retries, and reporting.
+- Reports and debugging: Use HTML reports, screenshots, videos, and traces.
+- CI/CD integration: Execute tests automatically through pipelines.
+
+Example framework structure:
+
+```
+playwright-framework/
+│
+├── tests/
+│   ├── login.spec.js
+│   ├── dashboard.spec.js
+│   └── profile.spec.js
+│
+├── pages/
+│   ├── LoginPage.js
+│   ├── DashboardPage.js
+│   └── ProfilePage.js
+│
+├── fixtures/
+│   └── testFixtures.js
+│
+├── test-data/
+│   └── users.json
+│
+├── utils/
+│   └── helpers.js
+│
+├── playwright.config.js
+├── package.json
+└── .gitignore
+```
+
+Example of a Page Object class:
+
+```
+// pages/LoginPage.js
+
+class LoginPage {
+    constructor(page) {
+        this.page = page;
+        this.username = page.locator('#username');
+        this.password = page.locator('#password');
+        this.loginButton = page.getByRole('button', {
+            name: 'Login'
+        });
+    }
+
+    async navigate() {
+        await this.page.goto('/login');
+    }
+
+    async login(username, password) {
+        await this.username.fill(username);
+        await this.password.fill(password);
+        await this.loginButton.click();
+    }
+}
+
+module.exports = { LoginPage };
+```
+
+Using the Page Object in a test:
+
+```
+const { test, expect } = require('@playwright/test');
+const { LoginPage } = require('../pages/LoginPage');
+
+test('Verify successful login', async ({ page }) => {
+    const loginPage = new LoginPage(page);
+
+    await loginPage.navigate();
+    await loginPage.login('admin', 'Admin@123');
+
+    await expect(page).toHaveURL(/dashboard/);
+});
+```
+
+Interview explanation:
+
+I follow the Page Object Model to separate UI interactions from test scenarios. I use fixtures for common setup, external files for test data, and centralized configuration for different environments.
+
+This structure improves maintainability, reduces duplication, and makes it easier to scale the framework as the number of test scenarios grows.
+
+Follow-up: How do you avoid creating too many utility functions?
+
+I create reusable functions only when there is a genuine need across multiple tests or pages. I avoid putting all application behavior into generic helper files because that makes the framework difficult to maintain.
+
+## 19. Explain your Page Object Model implementation.
+
+Answer:
+
+Page Object Model (POM) is a design pattern in which each application page or major component is represented by a separate class or module.
+
+Each page object contains:
+
+- Locators for the page elements.
+- Methods for performing actions.
+- Reusable interactions specific to that page.
+
+The main advantage is separation of test logic from UI implementation.
+
+Example:
+
+Suppose I am automating an e-commerce application with login and product search functionality.
+
+LoginPage.js
+
+```
+class LoginPage {
+    constructor(page) {
+        this.page = page;
+        this.username = page.getByLabel('Username');
+        this.password = page.getByLabel('Password');
+        this.loginButton = page.getByRole('button', {
+            name: 'Login'
+        });
+    }
+
+    async login(username, password) {
+        await this.username.fill(username);
+        await this.password.fill(password);
+        await this.loginButton.click();
+    }
+}
+
+module.exports = { LoginPage };
+```
+
+ProductPage.js
+
+```
+class ProductPage {
+    constructor(page) {
+        this.page = page;
+        this.searchBox = page.getByRole('textbox', {
+            name: 'Search products'
+        });
+        this.searchButton = page.getByRole('button', {
+            name: 'Search'
+        });
+    }
+
+    async searchProduct(productName) {
+        await this.searchBox.fill(productName);
+        await this.searchButton.click();
+    }
+}
+
+module.exports = { ProductPage };
+```
+
+Test file:
+
+```
+const { test, expect } = require('@playwright/test');
+const { LoginPage } = require('../pages/LoginPage');
+const { ProductPage } = require('../pages/ProductPage');
+
+test('Search for a product', async ({ page }) => {
+    const login = new LoginPage(page);
+    const product = new ProductPage(page);
+
+    await page.goto('https://example.com/login');
+
+    await login.login('admin', 'Admin@123');
+
+    await product.searchProduct('Laptop');
+
+    await expect(
+        page.getByText('Laptop')
+    ).toBeVisible();
+});
+```
+
+Interview explanation:
+
+In my POM implementation, I maintain page-specific locators and reusable actions in separate page classes. The test files focus on business scenarios and assertions.
+
+For example, if the login button's locator changes, I update it in the LoginPage class instead of modifying every test that uses the login functionality.
+
+Follow-up: What are the advantages and disadvantages of POM?
+
+Advantages:
+
+- Improves code reusability.
+- Reduces duplication.
+- Simplifies maintenance.
+- Separates UI interactions from test scenarios.
+
+Disadvantages:
+
+- Can introduce unnecessary complexity if every small component gets its own class.
+- Poorly designed page objects can become very large.
+- Excessive abstraction can make debugging harder.
+
+## 20. How would you integrate Playwright with Jenkins/GitHub Actions?
+
+Answer:
+
+I integrate Playwright with CI/CD pipelines to execute automated tests whenever code is pushed, a pull request is created, or a scheduled regression run is triggered.
+
+The general steps are:
+
+1. Configure the CI/CD environment with Node.js.
+2. Check out the source code from Git.
+3. Install project dependencies.
+4. Install the required Playwright browsers and system dependencies.
+5. Execute the required test suites.
+6. Generate test reports.
+7. Publish reports and relevant debugging artifacts.
+8. Configure pipeline failure when critical tests fail.
+
+Example: GitHub Actions
+
+Create the following workflow file:
+
+`.github/workflows/playwright.yml`
+
+```
+name: Playwright Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: npx playwright test
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+```
+
+Example: Jenkins pipeline
+
+```
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/user/project.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm ci'
+                sh 'npx playwright install --with-deps'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                sh 'npx playwright test'
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts(
+                artifacts: 'playwright-report/**',
+                allowEmptyArchive: true
+            )
+        }
+    }
+}
+```
+
+Interview explanation:
+
+I would configure Playwright tests to run automatically as part of the CI/CD pipeline. For example, smoke tests can run on pull requests, while the complete regression suite can run nightly or before a release.
+
+I would also configure HTML reports, screenshots, videos, and traces to help the team investigate failures. For larger suites, I would consider parallel execution and splitting tests across multiple CI jobs.
+
+Follow-up: How do you handle test failures in CI/CD?
+
+- Review the failed test details and HTML report.
+- Analyze screenshots, videos, and traces.
+- Identify whether the issue is related to the application, test script, test data, or environment.
+- Fix the underlying issue and rerun the relevant tests.
+- Track recurring failures and improve test stability.
+
+# Quick revision: Important Playwright concepts
+
+| Topic              | Key point to remember                                 |
+| ------------------ | ----------------------------------------------------- |
+| Browser            | Actual browser instance                               |
+| BrowserContext     | Isolated browser session                              |
+| Page               | Individual tab or window                              |
+| Locator            | Finds elements using supported selectors              |
+| `getByRole()`      | Finds elements by accessible role and name            |
+| Auto-waiting       | Waits for actionability before actions                |
+| `frameLocator()`   | Interacts with iframe elements                        |
+| `waitForEvent()`   | Waits for events such as popups and downloads         |
+| `storageState()`   | Saves and reuses cookies and local storage            |
+| Fixtures           | Reusable test setup and teardown                      |
+| Parallel execution | Runs tests simultaneously using workers               |
+| POM                | Separates page interactions from test logic           |
+| Trace Viewer       | Helps debug test execution                            |
+| Retries            | Reruns failed tests according to configuration        |
+| Projects           | Run tests across browsers or different configurations |
+| CI/CD              | Automates test execution in a pipeline                |
+
+My recommendation for your 5+ years SDET interviews
+
+Focus especially on these five areas because interviewers often use them to move from basic questions to practical scenarios:
+
+1. Framework design and POM: Be ready to explain how you structured your actual automation framework.
+2. Fixtures and authentication: Explain how you reuse setup and avoid repeated login steps.
+3. Flaky test debugging: Prepare one real example of a test failure and how you investigated it.
+4. Parallel execution and CI/CD: Explain how you run regression tests and manage reports.
+5. Real-time coding: Practice writing login, search, dropdown, iframe, popup, and API testing scripts without referring to notes.
+
