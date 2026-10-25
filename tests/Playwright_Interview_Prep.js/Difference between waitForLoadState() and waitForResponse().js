@@ -14,7 +14,7 @@ await page.waitForResponse(response =>
     response.url().includes('/api/orders') &&
     response.status() === 200
 );
-
+ 
 Summary:
 
 waitForLoadState() synchronizes with page lifecycle events, whereas waitForResponse() synchronizes with a specific network response.
